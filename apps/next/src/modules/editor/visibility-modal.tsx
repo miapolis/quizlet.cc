@@ -76,7 +76,7 @@ export const VisibilityModal: React.FC<VisibilityModalProps> = ({
         <ModalBody p="0" maxH="full">
           <Flex>
             <Stack spacing="5" flex="0" py="8" pl="10">
-              <Heading size="lg">Set visibility</Heading>
+              <Heading size="lg">Sichtbarkeit festlegen</Heading>
               <ToggleGroup
                 minW="400px"
                 h="max"
@@ -105,16 +105,16 @@ export const VisibilityModal: React.FC<VisibilityModalProps> = ({
               >
                 <ToggleGroup.Tab onClick={() => onChangeVisibility("Public")}>
                   <VisibilityOption
-                    name="Public"
-                    description="Anyone can view and study this set, and it will be publicly available on your profile."
+                    name="Öffentlich"
+                    description="Jeder kann dieses Kartenset lernen & auf deinem Profil sehen."
                     icon={<IconWorld size={20} />}
                     selected={visibility === "Public"}
                   />
                 </ToggleGroup.Tab>
                 <ToggleGroup.Tab onClick={() => onChangeVisibility("Unlisted")}>
                   <VisibilityOption
-                    name="Unlisted"
-                    description="Anyone can view and study this set via a direct link. It will be hidden from your profile and not visible in other folders."
+                    name="Ungelistet"
+                    description="Jeder kann dieses Kartenset mit einem Direktlink lernen, es ist jedoch nicht auf deinem Profil oder Ordnern aufgeführt."
                     icon={<IconLink size={20} />}
                     selected={visibility === "Unlisted"}
                   />
@@ -124,8 +124,8 @@ export const VisibilityModal: React.FC<VisibilityModalProps> = ({
                     onClick={() => onChangeVisibility("Private")}
                   >
                     <VisibilityOption
-                      name="Private"
-                      description="Only you can view and study this set. It will not appear on your profile and can't be added to other people's folders."
+                      name="Privat"
+                      description="Nur du kannst dieses Kartenset lernen. Das Set ist nicht auf deinem Profil sehen."
                       icon={<IconLock size={20} />}
                       selected={visibility === "Private"}
                     />
@@ -134,8 +134,8 @@ export const VisibilityModal: React.FC<VisibilityModalProps> = ({
                 {isTeacher && (
                   <ToggleGroup.Tab onClick={() => onChangeVisibility("Class")}>
                     <VisibilityOption
-                      name="Class"
-                      description="Only members of specific classes can view and study this set. It will be available to the classes but hidden from your profile."
+                      name="Klasse"
+                      description="Nur Schüler deiner Klasse können dieses Set lernen. Es ist in deinen Klassen, aber nicht auf deinem Profil sichtbar."
                       icon={<IconSchool size={20} />}
                       selected={visibility === "Class"}
                     />

@@ -10,14 +10,14 @@ export const Profile404 = () => {
       <VStack spacing={12} textAlign="center" px="8">
         <VStack spacing={4}>
           <IconHelpHexagon />
-          <Heading>We couldn&apos;t find this profile</Heading>
+          <Heading>Wir konnten dieses Profil nicht finden</Heading>
         </VStack>
         <VStack spacing={4}>
           <Text>
-            They might have changed their username, or deleted their account.
+            Der Nutzername könnte verändert, oder gelöscht worden sein
           </Text>
           <Button as={Link} href="/home" variant="ghost">
-            Home
+            Übersicht
           </Button>
         </VStack>
       </VStack>

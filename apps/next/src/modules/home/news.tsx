@@ -15,7 +15,7 @@ export const News = () => {
   return (
     <Stack spacing={6}>
       <Skeleton isLoaded={!!data} rounded="md" fitContent>
-        <Heading size="lg">What&apos;s new</Heading>
+        <Heading size="lg">Neuigkeiten</Heading>
       </Skeleton>
       <Grid templateColumns="repeat(auto-fill, minmax(256px, 1fr))" gap={4}>
         <Images />

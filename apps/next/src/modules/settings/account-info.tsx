@@ -13,8 +13,8 @@ export const AccountInfo = () => {
 
   return (
     <SectionWrapper
-      heading={session.user.name ? "Google account" : "Account"}
-      description="Read-only information about your account"
+      heading={session.user.name ? "Googlekonto" : "Konto"}
+      description="Schreibgeschütze Information zu deinem Konto"
     >
       <Stack spacing={0}>
         {session.user.name ? (

@@ -88,11 +88,11 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
   }, [wordFocused, definitionFocused, anyFocus]);
 
   const placeholderTerm =
-    wordLanguage != definitionLanguage ? languageName(wordLanguage) : "term";
+    wordLanguage != definitionLanguage ? languageName(wordLanguage) : "Frage";
   const placeholderDefinition =
     wordLanguage != definitionLanguage
       ? languageName(definitionLanguage)
-      : "definition";
+      : "Antwort";
 
   const [wordEmpty, setWordEmpty] = React.useState(false);
   const [definitionEmpty, setDefinitionEmpty] = React.useState(false);
@@ -349,7 +349,7 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
                     className="editor-placeholder"
                     pointerEvents="none"
                   >
-                    Enter {placeholderTerm}
+                    {placeholderTerm} eingeben
                   </Text>
                 )}
               </EditorContent>
@@ -367,7 +367,7 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
           </Box>
           <Flex justifyContent="space-between" h="6">
             <Text fontSize="sm" color={mutedText}>
-              Term
+              Frage
             </Text>
             <LanguageButtonPure type="word" />
           </Flex>
@@ -377,7 +377,7 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
             {(initialized || justCreated) && !readonly ? (
               <EditorContent
                 editor={definitionEditor}
-                placeholder={`Enter ${placeholderDefinition}`}
+                placeholder={`${placeholderDefinition} eingeben`}
                 onFocus={() => setDefinitionFocused(true)}
                 onBlur={blurDefinition}
                 onKeyDown={(e) => {
@@ -396,7 +396,7 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
                     className="editor-placeholder"
                     pointerEvents="none"
                   >
-                    Enter {placeholderDefinition}
+                    {placeholderDefinition} eingeben
                   </Text>
                 )}
               </EditorContent>
@@ -414,7 +414,7 @@ export const InnerTermCardRaw: React.FC<InnerTermCardProps> = ({
           </Box>
           <Flex justifyContent="space-between">
             <Text fontSize="sm" color={mutedText} h="6">
-              Definition
+              Antwort
             </Text>
             <LanguageButtonPure type="definition" />
           </Flex>

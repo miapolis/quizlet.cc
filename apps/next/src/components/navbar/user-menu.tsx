@@ -88,10 +88,10 @@ export const UserMenu = () => {
         shadow="lg"
       >
         <Link href={`/@${user.username}`} passHref>
-          <MenuOption icon={<IconUser size={18} />} label="Profile" />
+          <MenuOption icon={<IconUser size={18} />} label="Profil" />
         </Link>
         <Link href="/settings" passHref>
-          <MenuOption icon={<IconSettings size={18} />} label="Settings" />
+          <MenuOption icon={<IconSettings size={18} />} label="Einstellungen" />
         </Link>
         {me?.orgMembership && (
           <TeacherOnly>
@@ -109,12 +109,12 @@ export const UserMenu = () => {
           icon={
             colorMode == "dark" ? <IconSun size={18} /> : <IconMoon size={18} />
           }
-          label={colorMode == "dark" ? "Light mode" : "Dark mode"}
+          label={colorMode == "dark" ? "Heller Modus" : "Dunkler Modus"}
           onClick={toggleColorMode}
         />
         <MenuOption
           icon={<IconLogout size={18} />}
-          label="Sign out"
+          label="Abmelden"
           onClick={async () => {
             await signOut({
               callbackUrl: "/auth/login",

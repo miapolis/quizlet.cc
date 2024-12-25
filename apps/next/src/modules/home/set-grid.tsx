@@ -18,7 +18,7 @@ export const SetGrid = () => {
   return (
     <Stack spacing={6}>
       <Skeleton isLoaded={!!data} rounded="md" fitContent>
-        <Heading size="lg">Recent</Heading>
+        <Heading size="lg">Kürzlich</Heading>
       </Skeleton>
       <Grid templateColumns="repeat(auto-fill, minmax(256px, 1fr))" gap={4}>
         {isLoading &&

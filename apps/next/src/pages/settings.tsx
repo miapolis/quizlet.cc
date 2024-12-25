@@ -36,7 +36,7 @@ export const SettingsContext = React.createContext<{
 const Settings = () => {
   return (
     <AuthedPage>
-      <HeadSeo title="Settings" />
+      <HeadSeo title="Einstellungen" />
       <LazyWrapper>
         <SettingsInner />
       </LazyWrapper>
@@ -64,7 +64,7 @@ const SettingsInner = () => {
           <Stack spacing={12}>
             <HStack spacing="3">
               <IconSettings size={32} />
-              <Heading size="2xl">Settings</Heading>
+              <Heading size="2xl">Einstellungen</Heading>
             </HStack>
             <Stack spacing={8}>
               <AccountInfo />

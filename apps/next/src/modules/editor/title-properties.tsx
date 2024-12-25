@@ -38,7 +38,7 @@ export const TitleProperties = () => {
 
   const tagBg = useColorModeValue("gray.200", "gray.750");
 
-  const titleError = saveError == "Set title is required.";
+  const titleError = saveError == "\"Titel festlegen\" ist erforderlich.";
 
   return (
     <Stack spacing={6}>
@@ -52,7 +52,7 @@ export const TitleProperties = () => {
             onBlur={() => {
               apiSetTitle(title);
             }}
-            placeholder="Set Title"
+            placeholder="Titel festlegen"
             variant="unstyled"
             fontSize={["2xl", "3xl", "5xl"]}
             fontFamily="heading"
@@ -74,7 +74,7 @@ export const TitleProperties = () => {
             }}
           />
         </Box>
-        <Text color="gray.400">{plural(numTerms, "term")}</Text>
+        <Text color="gray.400">{numTerms} {numTerms > 1 ? "Fragen" : "Frage"}</Text>
       </Stack>
       <Flex gap={8} flexDir={{ base: "column", md: "row" }}>
         <AutoResizeTextarea
@@ -87,7 +87,7 @@ export const TitleProperties = () => {
             apiSetDescription(description);
           }}
           minHeight={36}
-          placeholder="Add a description..."
+          placeholder="Füge eine Beschreibung hinzu..."
           variant="filled"
           allowTab={false}
           w="full"
@@ -96,7 +96,7 @@ export const TitleProperties = () => {
           <Stack>
             <Heading size="lg">Tags</Heading>
             <Input
-              placeholder="e.g. Science, Chemistry, Organic Chemistry"
+              placeholder="z.B. Deutsch, Englisch, Mathe, ..."
               variant="flushed"
               value={tagsInput}
               onChange={(e) => setTagsInput(e.target.value)}

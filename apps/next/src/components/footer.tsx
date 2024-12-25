@@ -100,7 +100,7 @@ export const Footer = () => {
                   }}
                 >
                   <HStack>
-                    <Text color={textColor}>Command menu</Text>
+                    <Text color={textColor}>Tastenkürzel</Text>
                     <Text color={textColor}>
                       <Kbd>{MOD == "Control" ? "Ctrl" : "⌘"}</Kbd> +{" "}
                       <Kbd>K</Kbd>
@@ -125,26 +125,26 @@ export const Footer = () => {
             <Box display={{ base: "none", lg: "inherit" }}>
               <SocialLinksContainer />
             </Box>
-            <FooterLink href={WEBSITE_URL} text="Home" />
-            <FooterLink href={`${WEBSITE_URL}/pricing`} text="Pricing" />
+            <FooterLink href={WEBSITE_URL} text="Quenti.io" />
+            {/* <FooterLink href={`${WEBSITE_URL}/pricing`} text="Pricing" /> */}
             <FooterLink
-              href="https://github.com/quenti-io/quenti"
-              text="Open source"
+              href="https://github.com/Vokatius/BSZ-Wiesau-Lernkarten"
+              text="Quellcode"
             />
-            <FooterLink href="https://status.quenti.io" text="Status" />
-            <FooterLink
+            {/* <FooterLink href="https://status.quenti.io" text="Status" /> */}
+            {/* <FooterLink
               href={`${WEBSITE_URL}/organizations`}
               text="Organizations"
             />
             <FooterLink
               href={`mailto:${SUPPORT_EMAIL}`}
               text="Contact support"
-            />
-            <FooterLink href={`${WEBSITE_URL}/privacy`} text="Privacy Policy" />
-            <FooterLink href={`${WEBSITE_URL}/terms`} text="Terms of Service" />
+            /> */}
+            <FooterLink href={`${WEBSITE_URL}/privacy`} text="Datenschutzerklärung" />
+            <FooterLink href={`${WEBSITE_URL}/terms`} text="Nutzungsbedingungen" />
             <FooterLink
               href="https://github.com/quenti-io/quenti/blob/main/LICENSE"
-              text="License"
+              text="Lizenz"
             />
           </HStack>
           <Flex

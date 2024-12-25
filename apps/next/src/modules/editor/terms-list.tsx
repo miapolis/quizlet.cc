@@ -190,7 +190,7 @@ export const TermsList = () => {
           onClick={() => addTerm(terms.length)}
           isDisabled={disableAdd}
         >
-          Add card
+          Karte hinzufügen
         </Button>
       )}
     </Stack>

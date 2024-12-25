@@ -254,8 +254,8 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
 
       total.push({
         icon: <IconHome />,
-        name: "Home",
-        label: "Navigate home",
+        name: "Übersicht",
+        label: "Zur Startseite",
         action: (ctrl) => openLink(`/home`, ctrl),
         shouldShow: () => window.location.pathname !== "/home",
       });
@@ -263,7 +263,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
         total.push({
           icon: <IconBuildingSkyscraper />,
           name: me.orgMembership.organization.name,
-          label: "Navigate to your organization",
+          label: "Zu deinem Unternehmen",
           action: (ctrl) => openLink(`/orgs`, ctrl),
           shouldShow: () => window.location.pathname !== "/orgs",
         });
@@ -271,8 +271,8 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
 
       total.push({
         icon: <IconUser />,
-        name: "Profile",
-        label: "Navigate to your profile",
+        name: "Profil",
+        label: "Zu deinem Profil",
         action: (ctrl) =>
           openLink(`/@${session.data?.user?.username || ""}`, ctrl),
         shouldShow: () =>
@@ -281,44 +281,44 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
       });
       total.push({
         icon: <IconSettings />,
-        name: "Settings",
-        label: "Navigate to settings",
+        name: "Einstellungen",
+        label: "Zu den Einstellungen",
         action: (ctrl) => openLink(`/settings`, ctrl),
         shouldShow: () => window.location.pathname !== "/settings",
       });
 
       total.push({
         icon: <IconPlus />,
-        name: "Create Study Set",
-        label: "Create a new study set",
+        name: "Kartensatz erstellen",
+        label: "Erstelle einen neuen Kartensatz",
         action: (ctrl) => openLink(`/create`, ctrl),
         shouldShow: () => window.location.pathname !== "/create",
       });
       total.push({
         icon: <IconCloudDownload />,
-        name: "Import From Quizlet",
-        label: "Import a study set from Quizlet.com",
+        name: "Von Quizlet importieren",
+        label: "Importiere einen Kartensatz von Quizlet.com",
         action: () => menuEventChannel.emit("openImportDialog"),
       });
       total.push({
         icon: <IconFolderPlus />,
-        name: "Create Folder",
-        label: "Create a new folder",
+        name: "Ordner erstellen",
+        label: "Erstelle einen neuen Ordner",
         action: () => menuEventChannel.emit("createFolder"),
       });
       if (isTeacher) {
         total.push({
           icon: <IconPlus />,
-          name: "Create Class",
-          label: "Create a new class",
+          name: "Klasse erstellen",
+          label: "erstelle eine neue Klasse",
           action: () => menuEventChannel.emit("createClass"),
         });
       }
 
       total.push({
         icon: colorMode == "dark" ? <IconSun /> : <IconMoon />,
-        name: "Toggle Theme",
-        label: `Switch to ${colorMode == "dark" ? "light" : "dark"} mode`,
+        name: "Modus wechseln",
+        label: `In den ${colorMode == "dark" ? "hellen" : "dunklen"} Modus wechseln`,
         action: toggleColorMode,
       });
 
@@ -429,7 +429,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
             borderBottomColor={borderColor}
           >
             <Input
-              placeholder="Where would you like to go?"
+              placeholder="Wo möchstest du hin?"
               size="lg"
               variant="unstyled"
               fontSize="2xl"

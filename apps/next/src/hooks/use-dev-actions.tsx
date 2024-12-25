@@ -16,8 +16,8 @@ export const useDevActions = (): MenuOption[] => {
   const setAccountType = api.dev.setAccountType.useMutation();
 
   options.push({
-    name: `Switch to ${type === "Teacher" ? "Student" : "Teacher"} Account`,
-    label: "Switch account type",
+    name: `Zu ${type === "Teacher" ? "Schüler" : "Lehrer"}konto wechseln`,
+    label: "Kontotyp wechseln",
     icon: <IconSwitchHorizontal />,
     action: () => {
       setAccountType.mutate(type === "Teacher" ? "Student" : "Teacher");

@@ -15,8 +15,8 @@ export const Theme = () => {
 
   return (
     <SectionWrapper
-      heading="Theme"
-      description="Change the theme for this device"
+      heading="Modus"
+      description="Modus für dieses Gerät anpassen"
     >
       <VStack>
         <ToggleGroup
@@ -35,7 +35,7 @@ export const Theme = () => {
           >
             <VStack spacing="3">
               <ThemePreview variant="light" selected={colorMode == "light"} />
-              <Text fontWeight={600}>Light</Text>
+              <Text fontWeight={600}>Hell</Text>
             </VStack>
           </ToggleGroup.Tab>
           <ToggleGroup.Tab
@@ -46,7 +46,7 @@ export const Theme = () => {
           >
             <VStack spacing="3">
               <ThemePreview variant="dark" selected={colorMode == "dark"} />
-              <Text fontWeight={600}>Dark</Text>
+              <Text fontWeight={600}>Dunkel</Text>
             </VStack>
           </ToggleGroup.Tab>
         </ToggleGroup>

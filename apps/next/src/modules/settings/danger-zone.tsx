@@ -17,8 +17,8 @@ export const DangerZone = () => {
         onClose={() => setDeleteModalOpen(false)}
       />
       <SectionWrapper
-        heading="Danger zone"
-        description="Actions in this area are irreversible"
+        heading="Gefahrenzone"
+        description="Aktionen in diesem Bereich sind unumkehrbar"
       >
         <Button
           colorScheme="red"
@@ -27,7 +27,7 @@ export const DangerZone = () => {
           onClick={() => setDeleteModalOpen(true)}
           w="max"
         >
-          Delete account
+          Konto löschen
         </Button>
       </SectionWrapper>
     </>

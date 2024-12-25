@@ -29,6 +29,7 @@ import {
 } from "../../stores/use-set-editor-store";
 import { ShortcutModal } from "./shortcut-modal";
 import { VisibilityModal } from "./visibility-modal";
+import { visibilityString } from "../../utils/string";
 
 export interface ButtonAreaProps {
   onImportOpen: () => void;
@@ -108,7 +109,7 @@ export const ButtonArea = ({ onImportOpen }: ButtonAreaProps) => {
             onClick={onImportOpen}
             colorScheme="gray"
           >
-            Import terms
+            Fragen importieren
           </Button>
           {mode == "create" && (
             <Button
@@ -118,7 +119,7 @@ export const ButtonArea = ({ onImportOpen }: ButtonAreaProps) => {
                 menuEventChannel.emit("openImportDialog", true);
               }}
             >
-              Import from Quizlet
+              Aus Quizlet importieren
             </Button>
           )}
         </HStack>
@@ -137,23 +138,23 @@ export const ButtonArea = ({ onImportOpen }: ButtonAreaProps) => {
               setVisibilityModalOpen(true);
             }}
           >
-            {visibility}
+            {visibilityString(visibility)}
           </Button>
           <ButtonGroup spacing={4}>
-            <Tooltip label="Flip terms and definitions">
+            <Tooltip label="Tausche Frage und Antwort">
               <IconButton
                 icon={<IconSwitchHorizontal />}
                 rounded="full"
-                aria-label="Flip terms and definitions"
+                aria-label="Tausche Frage und Antwort"
                 onClick={flipTerms}
               />
             </Tooltip>
             <Menu placement="bottom-end">
-              <Tooltip label="Show keyboard shortcuts">
+              <Tooltip label="Zeige Tastaturkürzel">
                 <IconButton
                   icon={<IconKeyboard />}
                   rounded="full"
-                  aria-label="Show keyboard shortcuts"
+                  aria-label="Zeige Tastaturkürzel"
                   onClick={() => setShortcutModalOpen(true)}
                 />
               </Tooltip>
@@ -223,14 +224,14 @@ ButtonArea.Skeleton = function ButtonAreaSkeleton({
             <IconButton
               icon={<IconSwitchHorizontal />}
               rounded="full"
-              aria-label="Flip terms and definitions"
+              aria-label="Tausche Frage und Antwort"
             />
           </Skeleton>
           <Skeleton rounded="full">
             <IconButton
               icon={<IconKeyboard />}
               rounded="full"
-              aria-label="Show keyboard shortcuts"
+              aria-label="Zeige Tastaturkürzel"
             />
           </Skeleton>
         </ButtonGroup>

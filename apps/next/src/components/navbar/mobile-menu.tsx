@@ -107,7 +107,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 await router.push("/home");
               }}
             >
-              Home
+              Übersicht
             </Button>
           )}
           {session?.user && (
@@ -133,7 +133,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   }
                   as="div"
                 >
-                  Create
+                  Erstellen
                 </Button>
               </MenuButton>
               <MenuList
@@ -145,7 +145,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 <NextLink href="/create" passHref>
                   <MenuOption
                     icon={<IconBooks size={20} />}
-                    label="Study set"
+                    label="Kartensatz"
                     onClick={() => {
                       onClose();
                     }}
@@ -153,19 +153,19 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 </NextLink>
                 <MenuOption
                   icon={<IconCloudDownload size={20} />}
-                  label="Import from Quizlet"
+                  label="Von Quizlet importieren"
                   onClick={onImportClick}
                 />
                 <MenuDivider />
                 <MenuOption
                   icon={<IconFolder size={20} />}
-                  label="Folder"
+                  label="Ordner"
                   onClick={onFolderClick}
                 />
                 <TeacherOnly>
                   <MenuOption
                     icon={<IconSchool size={20} />}
-                    label="Class"
+                    label="Klasse"
                     onClick={onClassClick}
                   />
                 </TeacherOnly>

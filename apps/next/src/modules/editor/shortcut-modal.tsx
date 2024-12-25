@@ -16,10 +16,10 @@ export const ShortcutModal: React.FC<ShortcutModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Keyboard shortcuts</Modal.Heading>
+          <Modal.Heading>Tastaturkürzel</Modal.Heading>
           <Shortcut
-            name="Add card"
-            label="Inserts below the current card"
+            name="Karte hinzufügen"
+            label="Neue Karte under der Akutellen einfügen"
             shortcut={
               <span>
                 <Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + <Kbd>R</Kbd>
@@ -28,7 +28,7 @@ export const ShortcutModal: React.FC<ShortcutModalProps> = ({
           />
           <Modal.BodySeparator />
           <Shortcut
-            name="Next side or card"
+            name="Zum nächsten Eingabefeld"
             shortcut={
               <span>
                 <Kbd>Tab</Kbd>
@@ -37,7 +37,7 @@ export const ShortcutModal: React.FC<ShortcutModalProps> = ({
           />
           <Modal.BodySeparator />
           <Shortcut
-            name="Move current card up/down"
+            name="Aktuelle Karte verschieben"
             shortcut={
               <span>
                 <Kbd>Alt</Kbd> + <Kbd>↑</Kbd> / <Kbd>↓</Kbd>

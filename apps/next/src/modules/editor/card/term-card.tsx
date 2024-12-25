@@ -40,7 +40,7 @@ export const TermCard = React.forwardRef<TermCardRef, TermCardProps>(
     const setTermVisible = useSetEditorContext((s) => s.setTermVisible);
     const saveError = useSetEditorContext((s) => s.saveError);
 
-    const termError = saveError == "At least two terms are required.";
+    const termError = saveError == "Mindestens 2 Fragen müssen eingefügt werden.";
 
     React.useEffect(() => {
       if (inView) {

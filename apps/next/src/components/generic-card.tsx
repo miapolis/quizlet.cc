@@ -35,6 +35,7 @@ export interface GenericCardProps {
   title: string;
   numItems: number;
   itemsLabel: string;
+  itemLabel: string
   label?: React.ReactNode;
   bottom?: React.ReactNode;
   url: string;
@@ -54,6 +55,7 @@ export const GenericCard = ({
   title,
   numItems,
   itemsLabel,
+  itemLabel,
   label,
   bottom,
   url,
@@ -124,7 +126,7 @@ export const GenericCard = ({
           {!label ? (
             <HStack spacing="2" color={termsTextColor}>
               {leftIcon}
-              <Text fontSize="sm">{plural(numItems, itemsLabel)}</Text>
+              <Text fontSize="sm">{`${numItems} ${numItems > 1 ? itemsLabel : itemLabel}`}</Text>
               {rightIcon}
             </HStack>
           ) : (

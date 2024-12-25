@@ -21,8 +21,8 @@ export const FoldersList = () => {
   const grayText = useColorModeValue("gray.600", "gray.400");
 
   const placeholder = !profile.isMe
-    ? "This user hasn't created any folders."
-    : "You haven't created any folders yet.";
+    ? "Dieser Nutzer hat keine öffentlchen Ordner erstellt."
+    : "Du hast bisher keine Ordner erstellt.";
 
   return (
     <Stack spacing={8}>
@@ -50,7 +50,7 @@ export const FoldersList = () => {
       ))}
       {!grouped.length && (
         <Stack>
-          <Heading size="lg">Nothing yet</Heading>
+          <Heading size="lg">Zurzeit leer</Heading>
           <Text color={grayText}>{placeholder}</Text>
         </Stack>
       )}

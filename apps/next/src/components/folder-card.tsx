@@ -29,7 +29,8 @@ export const FolderCard: React.FC<FolderCardProps> = ({
       title={folder.title}
       numItems={numSets}
       url={`/@${user.username}/folders/${folder.slug ?? folder.id}`}
-      itemsLabel={"set"}
+      itemsLabel={"Kartensätze"}
+      itemLabel={"Kartensatz"}
       user={user}
       leftIcon={<IconFolder size={16} />}
       reverseTitle

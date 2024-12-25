@@ -55,9 +55,9 @@ export const TopBar = () => {
   const text = isSaving
     ? "Saving..."
     : saveError ??
-      `${plural(numTerms, "term")} saved ${
-        getRelativeTime(savedAt) || "just now"
-      }`;
+      `${numTerms} ${numTerms > 1 ? "Fragen" : "Frage"} ${
+        getRelativeTime(savedAt) || "jetzt gerade"
+      } gespeichert`;
 
   const [deleteOpen, setDeleteOpen] = React.useState(false);
 
@@ -101,18 +101,18 @@ export const TopBar = () => {
       <ConfirmModal
         isOpen={deleteOpen}
         onClose={() => setDeleteOpen(false)}
-        heading={mode == "edit" ? "Delete this set?" : "Discard this draft?"}
+        heading={mode == "edit" ? "Dieses Set löschen?" : "Diesen Plan verwerfen?"}
         body={
           mode == "edit" ? (
             <Text>
-              Are you absolutely sure you want to delete this set and all
-              associated data? This action cannot be undone.
+              Möchtest du wirklich dieses Set und alle damit verbundenen Daten Löschen? 
+              Diese Aktion kann nicht rückgängig gemacht werden.
             </Text>
           ) : (
-            "Are you sure you want to discard this draft? This action cannot be undone."
+            "Möchtest du diesen Plan wirklich verwerfen? Diese Aktion kann nicht rückgängig gemacht werden."
           )
         }
-        actionText={mode == "edit" ? "Delete" : "Discard"}
+        actionText={mode == "edit" ? "Löschen" : "Verwerfen"}
         onConfirm={() => {
           deleteSet.mutate({
             studySetId: id,
@@ -126,7 +126,7 @@ export const TopBar = () => {
           <HStack spacing="10px">
             <IconEditCircle size={18} />
             <Heading fontSize="lg">
-              {mode == "create" ? "Create a new set" : "Edit set"}
+              {mode == "create" ? "Erstelle ein neues Set" : "Editiere Set"}
             </Heading>
           </HStack>
           <HStack color={subTextColor} spacing={4}>
@@ -156,7 +156,7 @@ export const TopBar = () => {
               complete();
             }}
           >
-            {mode == "edit" ? "Done" : "Create"}
+            {mode == "edit" ? "Fertig" : "Fertigstellen"}
           </Button>
           <Menu>
             <MenuButton
@@ -180,7 +180,7 @@ export const TopBar = () => {
               {mode == "create" && (
                 <MenuOption
                   icon={<IconPlus size={18} />}
-                  label="New draft"
+                  label="Neuer Plan"
                   onClick={() => {
                     createAutosave.mutate();
                   }}
@@ -188,7 +188,7 @@ export const TopBar = () => {
               )}
               <MenuOption
                 icon={<IconTrash size={18} />}
-                label={mode == "create" ? "Discard draft" : "Delete set"}
+                label={mode == "create" ? "Plan löschen" : "Set löschen"}
                 onClick={() => setDeleteOpen(true)}
               />
             </MenuList>

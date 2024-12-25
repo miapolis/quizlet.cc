@@ -26,8 +26,8 @@ export const AccountType = () => {
 
   return (
     <SectionWrapper
-      heading="Account type"
-      description="Select your account type"
+      heading="Kontotyp"
+      description="Wähle deinen Kontotyp"
     >
       <ToggleGroup
         index={type == "Student" ? 0 : 1}
@@ -46,7 +46,7 @@ export const AccountType = () => {
             transition="color 0.15s ease-in-out"
           >
             <IconBooks size={18} />
-            <Text fontWeight={600}>Student</Text>
+            <Text fontWeight={600}>Schüler</Text>
           </HStack>
         </ToggleGroup.Tab>
         <ToggleGroup.Tab
@@ -61,7 +61,7 @@ export const AccountType = () => {
             transition="color 0.15s ease-in-out"
           >
             <IconSchool size={18} />
-            <Text fontWeight={600}>Teacher</Text>
+            <Text fontWeight={600}>Lehrer</Text>
           </HStack>
         </ToggleGroup.Tab>
       </ToggleGroup>

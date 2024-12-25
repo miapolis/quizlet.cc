@@ -28,7 +28,7 @@ const TermCardGapRaw: React.FC<TermCardGapProps> = ({ index }) => {
         leftIcon={<IconPlus size={18} />}
         onClick={() => addTerm(index + 1)}
       >
-        Add term here
+        Frage hier hinzufügen
       </Button>
     </Center>
   );

@@ -18,7 +18,7 @@ const InternalCreate = dynamic(
 const Create = () => {
   return (
     <AuthedPage>
-      <HeadSeo title="Create a new set" />
+      <HeadSeo title="Neuer Kartensatz" />
       <LazyWrapper>
         <WithFooter>
           <Container maxW="7xl">

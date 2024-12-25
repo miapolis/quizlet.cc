@@ -28,10 +28,10 @@ const InternalProfile = () => {
             <Tabs borderColor={borderColor}>
               <TabList gap="6">
                 <Tab px="0" bg="none" fontWeight={600}>
-                  Study sets
+                  Kartensätze
                 </Tab>
                 <Tab px="0" bg="none" fontWeight={600}>
-                  Folders
+                  Ordner
                 </Tab>
               </TabList>
               <TabPanels mt="10">

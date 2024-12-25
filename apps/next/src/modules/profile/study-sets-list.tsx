@@ -20,8 +20,8 @@ export const StudySetsList = () => {
   const grayText = useColorModeValue("gray.600", "gray.400");
 
   const placeholder = !profile.isMe
-    ? "This user doesn't have any public study sets."
-    : "You haven't created any study sets yet.";
+    ? "Dieser Nutzer hat keine öffentlichen Kartensätze."
+    : "Du hast bisher keine Kartensätze erstellt.";
 
   return (
     <Stack spacing={8}>
@@ -49,7 +49,7 @@ export const StudySetsList = () => {
       ))}
       {!grouped.length && (
         <Stack>
-          <Heading size="lg">Nothing yet</Heading>
+          <Heading size="lg">Zurzeit leer</Heading>
           <Text color={grayText}>{placeholder}</Text>
         </Stack>
       )}

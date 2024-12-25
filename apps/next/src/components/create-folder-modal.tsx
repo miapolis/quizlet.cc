@@ -55,10 +55,10 @@ export const CreateFolderModal: React.FC<CreateFolderModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Create folder</Modal.Heading>
+          <Modal.Heading>Ordner erstellen</Modal.Heading>
           <Stack spacing={4}>
             <Input
-              placeholder="Title"
+              placeholder="Titel"
               variant="flushed"
               fontWeight={700}
               bg="gray.100"
@@ -73,7 +73,7 @@ export const CreateFolderModal: React.FC<CreateFolderModalProps> = ({
             />
             <AutoResizeTextarea
               allowTab={false}
-              placeholder="Description (optional)"
+              placeholder="Beschreibung (optional)"
               py="3"
               border="none"
               bg="gray.50"
@@ -92,7 +92,7 @@ export const CreateFolderModal: React.FC<CreateFolderModalProps> = ({
         <Modal.Footer>
           <ButtonGroup gap={2}>
             <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-              Cancel
+              Abbrechen
             </Button>
             <Button
               isLoading={createFolder.isLoading}
@@ -104,7 +104,7 @@ export const CreateFolderModal: React.FC<CreateFolderModalProps> = ({
                 });
               }}
             >
-              Create
+              Erstellen
             </Button>
           </ButtonGroup>
         </Modal.Footer>

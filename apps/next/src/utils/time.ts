@@ -16,7 +16,7 @@ const units = {
   second: 1000,
 };
 
-export const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+export const rtf = new Intl.RelativeTimeFormat("de", { numeric: "auto" });
 
 // https://stackoverflow.com/a/53800501/9768266
 export const getRelativeTime = (d1: Date, d2 = new Date()) => {
@@ -30,9 +30,9 @@ export const getRelativeTime = (d1: Date, d2 = new Date()) => {
           Math.round(elapsed / units[u as keyof typeof units]),
           u as Parameters<typeof rtf.format>[1],
         )
-        .replace(/now/g, "just now")
-        .replace(/^\d second[s]? ago$/, "just now")
-        .replace(/^in.*$/, "just now");
+        .replace(/jetzt/g, "gerade eben") // Anpassung für "jetzt"
+        .replace(/vor 1 Sekunde/, "gerade eben") // Singular
+        .replace(/in.*Sekunde/, "gerade eben"); // Zukünftige Zeit
 };
 
 export const relevantLabel = (date: Date) => {

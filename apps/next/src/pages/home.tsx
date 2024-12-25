@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <AuthedPage>
-      <HeadSeo title="Home" />
+      <HeadSeo title="Übersicht" />
       <LazyWrapper>
         <WithFooter>
           <Container maxW="7xl">
@@ -32,7 +32,6 @@ const Home = () => {
               {!isLoading && isEmpty && <EmptyDashboard />}
               <SetGrid />
               <ClassesGrid />
-              <News />
             </Stack>
           </Container>
         </WithFooter>

@@ -50,7 +50,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
       <Modal.Content>
         <Modal.Body>
           <Stack spacing="2">
-            <Modal.Heading>{heading || "Are you sure?"}</Modal.Heading>
+            <Modal.Heading>{heading || "Bist du sicher?"}</Modal.Heading>
             <Text color={mutedColor}>{body}</Text>
           </Stack>
         </Modal.Body>
@@ -65,7 +65,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
                 onClose();
               }}
             >
-              {cancelText ?? "Cancel"}
+              {cancelText ?? "Abbrechen"}
             </Button>
             <Button
               onClick={onConfirm}
@@ -73,7 +73,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
               colorScheme={destructive ? "red" : "blue"}
               variant={destructive ? "outline" : "solid"}
             >
-              {actionText ?? "Confirm"}
+              {actionText ?? "Bestätigen"}
             </Button>
           </ButtonGroup>
         </Modal.Footer>

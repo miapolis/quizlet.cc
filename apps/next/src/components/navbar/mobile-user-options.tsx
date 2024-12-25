@@ -88,7 +88,7 @@ export const MobileUserOptions: React.FC<MobileUserOptionsProps> = ({
           href={`/@${user.username}`}
           leftIcon={<IconUserCircle size={18} />}
         >
-          Profile
+          Profil
         </Button>
         <Button
           variant="outline"
@@ -96,7 +96,7 @@ export const MobileUserOptions: React.FC<MobileUserOptionsProps> = ({
           href={`/settings`}
           leftIcon={<IconSettings size={18} />}
         >
-          Settings
+          Einstellungen
         </Button>
         <Button
           leftIcon={
@@ -108,7 +108,7 @@ export const MobileUserOptions: React.FC<MobileUserOptionsProps> = ({
           }}
           variant="outline"
         >
-          {colorMode == "dark" ? "Light mode" : "Dark mode"}
+          {colorMode == "dark" ? "Heller Modus" : "Dunkler Modus"}
         </Button>
         <Button
           variant="outline"
@@ -119,7 +119,7 @@ export const MobileUserOptions: React.FC<MobileUserOptionsProps> = ({
             });
           }}
         >
-          Sign out
+          Abmelden
         </Button>
       </Stack>
     </Stack>

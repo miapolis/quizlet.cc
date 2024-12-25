@@ -37,18 +37,19 @@ export const StudySetCard: React.FC<StudySetCardProps> = ({
 }) => {
   return (
     <GenericCard
-      title={studySet.title || "Untitled"}
+      title={studySet.title || "Unbetitelt"}
       numItems={numTerms}
       url={!draft ? `/${studySet.id}` : `/${studySet.id}/create`}
-      itemsLabel={"term"}
+      itemsLabel={"Fragen"}
+      itemLabel={"Frage"}
       label={
         draft ? (
           <>
             <IconProgress size={16} />
             <HStack spacing="1" fontSize="sm">
-              <Text>Draft</Text>
+              <Text>Plan</Text>
               <IconPointFilled size={8} />
-              <Text>{plural(numTerms, "term")}</Text>
+              <Text>{numTerms + numTerms > 1 ? "Fragen" : "Frage"}</Text>
             </HStack>
           </>
         ) : undefined

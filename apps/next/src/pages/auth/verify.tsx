@@ -21,7 +21,7 @@ export default function Verify() {
   return (
     <>
       <HeadSeo
-        title="Check your inbox"
+        title="Prüfe deine Emails"
         nextSeoProps={{
           nofollow: true,
           noindex: true,
@@ -34,7 +34,7 @@ export default function Verify() {
             <Container maxW="xl" w="full" zIndex={10}>
               <VStack spacing="8" textAlign="center">
                 <Logo width={20} height={20} />
-                <Heading fontSize="4xl">Check your inbox</Heading>
+                <Heading fontSize="4xl">Prüfe dein Postfach</Heading>
                 <Text
                   fontWeight={500}
                   color="gray.700"
@@ -42,9 +42,9 @@ export default function Verify() {
                     color: "gray.300",
                   }}
                 >
-                  We&apos;ve sent you a magic login link.
+                  Wir haben dir einen Anmeldelink gesendet.
                   <br />
-                  Please click the link to confirm your email.
+                  Bitte öffne den Link um deine Adresse zu bestätigen
                 </Text>
                 <Box
                   h="2px"
@@ -79,7 +79,7 @@ export default function Verify() {
                       color: "gray.400",
                     }}
                   >
-                    Open Gmail
+                    Gmail öffnen
                   </Button>
                   <Button
                     variant="ghost"
@@ -105,7 +105,7 @@ export default function Verify() {
                       color: "gray.400",
                     }}
                   >
-                    Open Outlook
+                    Outlook öffnen
                   </Button>
                 </HStack>
                 <Text
@@ -115,9 +115,9 @@ export default function Verify() {
                   }}
                   fontSize="xs"
                 >
-                  Can&apos;t see the email? Please check your spam folder.
+                  Email nicht gefunden? Bitte prüfe deinen Span ordner.
                   <br />
-                  Wrong email?{" "}
+                  Falsche Email?{" "}
                   <Link
                     href="/auth/signup"
                     color="blue.300"
@@ -133,7 +133,7 @@ export default function Verify() {
                     transition="color 0.2s ease-in-out"
                     fontWeight={500}
                   >
-                    Please re-enter your address.
+                    Gebe deine richtige Adresse ein
                   </Link>
                 </Text>
               </VStack>

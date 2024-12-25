@@ -48,8 +48,8 @@ export const ProfileInfo = () => {
 
   return (
     <SectionWrapper
-      heading="Profile"
-      description="Your username and public profile info"
+      heading="Profil"
+      description="Dein Nutzername und öffentliche Informationen"
       additional={
         <Button
           variant="outline"
@@ -58,7 +58,7 @@ export const ProfileInfo = () => {
           href={`/@${session!.user!.username}`}
           w="max"
         >
-          View your profile
+          Dein Profil ansehen
         </Button>
       }
     >
@@ -86,7 +86,7 @@ export const ProfileInfo = () => {
           </Skeleton>
           <Stack spacing="10px">
             <Text fontSize="sm" color={grayText}>
-              We recommend using an image of at least 256x256 for your avatar
+              Wir empfehlen eine Bildgröße von 256x256 für deinen Avatar
             </Text>
             <ButtonGroup
               colorScheme="gray"
@@ -99,7 +99,7 @@ export const ProfileInfo = () => {
                 w="max"
                 leftIcon={<IconUpload size={16} />}
               >
-                Change avatar
+                Avatar ändern
               </Button>
               {image && !image?.startsWith(env.NEXT_PUBLIC_APP_URL) && (
                 <Button
@@ -110,7 +110,7 @@ export const ProfileInfo = () => {
                   isLoading={removeAvatar.isLoading}
                   onClick={() => removeAvatar.mutate()}
                 >
-                  Remove
+                  Entfernen
                 </Button>
               )}
             </ButtonGroup>
@@ -128,16 +128,16 @@ export const ProfileInfo = () => {
               }}
             />
             <Text color={grayText} fontSize="sm">
-              Display your real name on your profile
+              Deinen Echtnamen im Profil anzeigen
             </Text>
           </HStack>
         )}
         <Stack spacing={2}>
           <Text color={grayText} fontSize="sm">
-            Change username
+            Nutzernamen anpassen
           </Text>
           <ChangeUsernameInput
-            buttonLabel="Change"
+            buttonLabel="Ändern"
             onChange={async () => {
               await update();
             }}

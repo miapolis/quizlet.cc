@@ -40,7 +40,7 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
 
   const generatePlaceholder = () => {
     return Array.from({ length: 3 })
-      .map((_, i) => `Term ${i + 1}${td}Definition ${i + 1}`)
+      .map((_, i) => `Frage ${i + 1}${td}Antwort ${i + 1}`)
       .join(cd);
   };
 
@@ -78,12 +78,11 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Import terms</Modal.Heading>
+          <Modal.Heading>Fragen importieren</Modal.Heading>
           <Stack spacing={6}>
             <FormControl>
               <FormLabel mb="3">
-                Copy and paste your terms and definitions in the following
-                format:
+                Kopiere & füge deine Fragen und Antworten im folgenden Format hier ein:
               </FormLabel>
               <AutoResizeTextarea
                 bg={textareaBg}
@@ -98,9 +97,9 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
             <Flex gap={4}>
               <Stack w="full">
                 <Stack spacing={0}>
-                  <Text fontWeight={700}>In between terms</Text>
+                  <Text fontWeight={700}>Zwischen den Fragen</Text>
                   <Text fontSize="sm" color={grayText}>
-                    Defaults to tab
+                    Standartwert: Tab (\t)
                   </Text>
                 </Stack>
                 <Input
@@ -112,9 +111,9 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
               </Stack>
               <Stack w="full">
                 <Stack spacing={0}>
-                  <Text fontWeight={700}>In between cards</Text>
+                  <Text fontWeight={700}>Zwischen den Karten</Text>
                   <Text fontSize="sm" color={grayText}>
-                    Defaults to newline
+                  Standartwert: neue Zeile (\n)
                   </Text>
                 </Stack>
                 <Input
@@ -126,8 +125,8 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
               </Stack>
             </Flex>
             <Text fontWeight={700}>
-              Preview{" "}
-              {!!previewTerms.length && plural(previewTerms.length, "term")}
+              Vorschau:{" "}
+              {!!previewTerms.length && `${previewTerms.length} ${previewTerms.length > 1 ? "Fragen" : "Frage"}`}
             </Text>
             <Stack>
               {previewTerms.map(({ word, definition }, i) => (
@@ -147,7 +146,7 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
                 />
               ))}
               {!previewTerms.length && (
-                <Text color={grayText}>Nothing to preview</Text>
+                <Text color={grayText}>Es gibt nichts zu sehen</Text>
               )}
             </Stack>
           </Stack>
@@ -156,7 +155,7 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
         <Modal.Footer>
           <ButtonGroup>
             <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-              Cancel
+              Abbrechen
             </Button>
             <Button
               isDisabled={!previewTerms.length}
@@ -164,8 +163,8 @@ export const ImportTermsModal: React.FC<ImportTermsModalProps> = ({
                 onImport(previewTerms);
               }}
             >
-              Import{" "}
-              {!!previewTerms.length && plural(previewTerms.length, "term")}
+              Importiere{" "}
+              {!!previewTerms.length && `${previewTerms.length} ${previewTerms.length > 1 ? "Fragen" : "Frage"}`}
             </Button>
           </ButtonGroup>
         </Modal.Footer>

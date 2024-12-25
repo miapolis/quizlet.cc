@@ -115,7 +115,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
     });
   };
 
-  const verb = mode == "signup" ? "up" : "in";
+  const verb = mode == "signup" ? "registrieren" : "anmelden";
   const gradient = useColorModeValue(
     "linear(to-t, gray.50, blue.300)",
     "linear(to-t, gray.1000, blue.300)",
@@ -171,8 +171,8 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                     <Logo width={24} height={24} />
                     <Heading fontSize="24px" textAlign="center">
                       {mode == "signup"
-                        ? "Create your Quenti account"
-                        : "Welcome back"}
+                        ? "Quenti Account erstellen"
+                        : "Willkommen zurück!"}
                     </Heading>
                     <form
                       style={{
@@ -199,7 +199,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                             });
                           }}
                         >
-                          Sign {verb} with Google
+                          Mit Google {verb}
                         </Button>
                         <Box>
                           <Stack
@@ -234,7 +234,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                                     onChange={onChange}
                                     mt="2"
                                     minH="40px"
-                                    placeholder="Enter your email address"
+                                    placeholder="Gib deine Email-Adresse ein"
                                     fontSize="sm"
                                     borderColor="gray.300"
                                     _dark={{
@@ -278,11 +278,11 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                               <Center minH="48px">
                                 <HStack>
                                   <IconWand size={16} />
-                                  <Text>Send me a magic link</Text>
+                                  <Text>Sende mir einen Anmeldelink</Text>
                                 </HStack>
                               </Center>
                               <Center minH="48px">
-                                <Text>Sign {verb} with email</Text>
+                                <Text>Via Email {verb}</Text>
                               </Center>
                             </Stack>
                           </Button>
@@ -295,11 +295,11 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                       </Box>
                       <Stack spacing="1">
                         <Text fontWeight={700} fontSize="sm">
-                          If Google has blocked your school&apos;s access
+                          Falls Google nicht funktioniert
                         </Text>
                         <Text fontSize="sm" color="gray.500">
-                          No worries, sign {verb} with email instead, and
-                          we&apos;ll send you a link to instantly log in.
+                          kannst du dich einfach mit deiner Email {verb}, und wir
+                          senden dir einen Anmeldelink!
                         </Text>
                       </Stack>
                     </Flex>
@@ -311,23 +311,23 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
                         maxW="260px"
                         mt="-4"
                       >
-                        By signing up, you agree to the{" "}
+                        Mit der registrierung akzeptierst du unsere {" "}
                         <Link
                           href={`${WEBSITE_URL}/terms`}
                           _hover={{
                             textDecoration: "underline",
                           }}
                         >
-                          Privacy Policy
+                          Datenschutzerklärung
                         </Link>{" "}
-                        and{" "}
+                        und{" "}
                         <Link
                           href={`${WEBSITE_URL}/privacy`}
                           _hover={{
                             textDecoration: "underline",
                           }}
                         >
-                          Terms of Service
+                          TOS
                         </Link>
                         .
                       </Text>

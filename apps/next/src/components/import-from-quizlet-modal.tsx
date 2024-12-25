@@ -194,7 +194,7 @@ export const ImportFromQuizletModal: React.FC<ImportFromQuizletModalProps> = ({
           rounded="xl"
         >
           <Modal.Body>
-            <Modal.Heading>Import from Quizlet</Modal.Heading>
+            <Modal.Heading>Von Quizlet importieren</Modal.Heading>
             <FormControl isInvalid={!!error}>
               <Input
                 placeholder="https://quizlet.com/123456789"
@@ -212,10 +212,10 @@ export const ImportFromQuizletModal: React.FC<ImportFromQuizletModalProps> = ({
               />
               {urlIsShare && (
                 <Text mt="4" fontSize="sm">
-                  Copy the link from the address bar in your browser.
+                  Kopiere den Link aus deiner Adresszeile
                   <br />
                   <strong>
-                    Using the link copied from the share menu will not work.
+                    Der Link aus dem Teilen-Menü funktioniert nicht
                   </strong>
                 </Text>
               )}
@@ -255,7 +255,7 @@ export const ImportFromQuizletModal: React.FC<ImportFromQuizletModalProps> = ({
               <Fade in={!isLoading}>
                 <ButtonGroup gap={2} isDisabled={isLoading}>
                   <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-                    Cancel
+                    Abbrechen
                   </Button>
                   <Button
                     isLoading={fromUrl.isLoading}
@@ -268,7 +268,7 @@ export const ImportFromQuizletModal: React.FC<ImportFromQuizletModalProps> = ({
                       });
                     }}
                   >
-                    Import
+                    Importieren
                   </Button>
                 </ButtonGroup>
               </Fade>

@@ -83,6 +83,7 @@ export const LeftNav: React.FC<LeftNavProps> = ({
           >
             Quenti
           </Heading>
+          <span>BSZ Wiesau</span>
         </HStack>
       </Flex>
       {session?.user && me && (
@@ -95,9 +96,9 @@ export const LeftNav: React.FC<LeftNavProps> = ({
             fontWeight={700}
             fontSize="sm"
           >
-            Home
+            Übersicht
           </Button>
-          <TeacherOnly>
+          {/* <TeacherOnly>
             {session.user?.isOrgEligible && !earlyClassAccess && (
               <UnboundOnly strict>
                 <Button
@@ -116,7 +117,7 @@ export const LeftNav: React.FC<LeftNavProps> = ({
                 </Button>
               </UnboundOnly>
             )}
-          </TeacherOnly>
+          </TeacherOnly> */}
           <Menu
             placement="bottom-start"
             isOpen={menuOpen}
@@ -137,7 +138,7 @@ export const LeftNav: React.FC<LeftNavProps> = ({
                 }
                 as="div"
               >
-                Create
+                Erstellen
               </Button>
             </MenuButton>
             <MenuList
@@ -149,23 +150,23 @@ export const LeftNav: React.FC<LeftNavProps> = ({
               shadow="lg"
             >
               <NextLink href="/create" passHref>
-                <MenuOption icon={<IconBooks size={20} />} label="Study set" />
+                <MenuOption icon={<IconBooks size={20} />} label="Kartensatz" />
               </NextLink>
               <MenuOption
                 icon={<IconCloudDownload size={20} />}
-                label="Import from Quizlet"
+                label="Aus Quizlet importieren"
                 onClick={onImportClick}
               />
               <MenuDivider />
               <MenuOption
                 icon={<IconFolder size={20} />}
-                label="Folder"
+                label="Ordner"
                 onClick={onFolderClick}
               />
               <TeacherOnly>
                 <MenuOption
                   icon={<IconSchool size={20} />}
-                  label="Class"
+                  label="Klasse"
                   onClick={onClassClick}
                 />
               </TeacherOnly>
