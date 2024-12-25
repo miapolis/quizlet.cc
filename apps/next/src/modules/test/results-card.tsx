@@ -133,7 +133,7 @@ export const ResultsCard = () => {
                     fontWeight={500}
                     fontSize="md"
                   >
-                    correct
+                    richtig
                   </Text>
                 </Heading>
               </HStack>
@@ -154,7 +154,7 @@ export const ResultsCard = () => {
                     fontWeight={500}
                     fontSize="md"
                   >
-                    incorrect
+                    falsch
                   </Text>
                 </Heading>
               </HStack>
@@ -171,7 +171,7 @@ export const ResultsCard = () => {
         >
           <Stack spacing="4" flex={{ base: "1", md: undefined }}>
             <Heading size="md" w="40">
-              By question type
+              Nach Fragetyp
             </Heading>
             <Stack w={{ base: "full", sm: "max-content" }}>
               {result.byType.map((props) => (
@@ -182,7 +182,7 @@ export const ResultsCard = () => {
           <Box display={{ base: "none", sm: "inherit" }}>{divider}</Box>
           <Box display={{ base: "block", sm: "none" }}>{horizontalDivider}</Box>
           <Stack spacing="4" flex={{ base: "1", md: undefined }}>
-            <Heading size="md">Time</Heading>
+            <Heading size="md">Zeit</Heading>
             <HStack>
               <IconHourglassLow size={18} />
               <Text fontWeight={600}>

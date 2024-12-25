@@ -82,7 +82,7 @@ export const UploadAvatarModal: React.FC<UploadAvatarModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Change avatar</Modal.Heading>
+          <Modal.Heading>Avatar anpassen</Modal.Heading>
           <VStack spacing="6">
             <Box position="relative" h="40" w="40">
               {result ? (
@@ -99,7 +99,7 @@ export const UploadAvatarModal: React.FC<UploadAvatarModalProps> = ({
                       <IconUpload size={100} />
                     </Box>
                     <HStack fontSize="sm" fontWeight={500}>
-                      <Text>Image files up to 5 MB</Text>
+                      <Text>Bilddateien bis zu 5 MB</Text>
                     </HStack>
                   </VStack>
                 </Center>
@@ -114,7 +114,7 @@ export const UploadAvatarModal: React.FC<UploadAvatarModalProps> = ({
             />
             <label htmlFor="upload-avatar-input">
               <Button as="span" cursor="pointer" variant="outline" size="sm">
-                Choose a file
+                Datei wählen
               </Button>
             </label>
           </VStack>
@@ -123,10 +123,10 @@ export const UploadAvatarModal: React.FC<UploadAvatarModalProps> = ({
         <Modal.Footer>
           <ButtonGroup>
             <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-              Cancel
+              Abbrechen
             </Button>
             <Button isLoading={isLoading} onClick={() => submitBuffer(crop)}>
-              Save
+              Speichern
             </Button>
           </ButtonGroup>
         </Modal.Footer>

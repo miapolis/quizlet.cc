@@ -10,7 +10,7 @@ export const LinkAreaSkeletonRaw = () => {
       h="max-content"
       columns={{ base: 2, md: 3, lg: 1 }}
     >
-      {["Learn", "Flashcards", "Test", "Match", "Crossword", "Gravity"].map(
+      {["Learn", "Flashcards", "Test", "Match"].map(
         (title, i) => (
           <Box
             key={i}

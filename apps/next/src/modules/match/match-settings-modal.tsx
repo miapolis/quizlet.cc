@@ -32,7 +32,7 @@ export const MatchSettingsModal: React.FC<MatchSettingsModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Settings</Modal.Heading>
+          <Modal.Heading>Einstellungen</Modal.Heading>
           <StudyStarredSection />
         </Modal.Body>
       </Modal.Content>

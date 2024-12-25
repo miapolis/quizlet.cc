@@ -43,10 +43,10 @@ export const EditFolderModal: React.FC<EditFolderModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Edit folder</Modal.Heading>
+          <Modal.Heading>Ordner bearbeiten</Modal.Heading>
           <Stack spacing={4}>
             <Input
-              placeholder="Title"
+              placeholder="Titel"
               variant="flushed"
               fontWeight={700}
               bg="gray.100"
@@ -60,7 +60,7 @@ export const EditFolderModal: React.FC<EditFolderModalProps> = ({
             />
             <AutoResizeTextarea
               allowTab={false}
-              placeholder="Description (optional)"
+              placeholder="Beschreibung (optional)"
               py="3"
               border="none"
               bg="gray.50"
@@ -79,7 +79,7 @@ export const EditFolderModal: React.FC<EditFolderModalProps> = ({
         <Modal.Footer>
           <ButtonGroup>
             <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-              Cancel
+              Abbrechen
             </Button>
             <Button
               isLoading={editFolder.isLoading}
@@ -91,7 +91,7 @@ export const EditFolderModal: React.FC<EditFolderModalProps> = ({
                 });
               }}
             >
-              Save
+              Speichern
             </Button>
           </ButtonGroup>
         </Modal.Footer>

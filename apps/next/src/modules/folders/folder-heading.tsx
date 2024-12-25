@@ -64,14 +64,14 @@ export const FolderHeading = () => {
       <ConfirmModal
         isOpen={deleteOpen}
         onClose={() => setDeleteOpen(false)}
-        heading="Delete this folder?"
+        heading="Diesen Ordner löschen?"
         body={
           <Text>
-            Are you sure you want to delete this folder? This action cannot be
-            undone.
+            Möchtest du diesen Ordner wirklich löschen?
+            Der Ordner kann nicht wiederhergestellt werden.
           </Text>
         }
-        actionText="Delete"
+        actionText="Löschen"
         isLoading={deleteFolder.isLoading}
         onConfirm={() => {
           deleteFolder.mutate({ folderId: id });
@@ -104,7 +104,7 @@ export const FolderHeading = () => {
               spacing="6px"
             >
               <IconFolder size={18} />
-              <Text>{plural(folder.sets.length, "set")}</Text>
+              <Text>{folder.sets.length} {folder.sets.length > 1 || folder.sets.length === 0 ? "Kartensätze" : "Kartensatz"}</Text>
             </HStack>
           </HStack>
         </Stack>
@@ -129,12 +129,12 @@ export const FolderHeading = () => {
             >
               <IconButton
                 icon={<IconShare size={18} />}
-                aria-label="Share"
+                aria-label="Teilen"
                 onClick={() => setShareOpen(true)}
               />
               <IconButton
                 icon={<IconEditCircle size={18} />}
-                aria-label="Edit"
+                aria-label="Bearbeiten"
                 onClick={() => setEditOpen(true)}
               />
               <MenuButton as={IconButton} w="10" h="10" p="0">
@@ -152,7 +152,7 @@ export const FolderHeading = () => {
               >
                 <MenuOption
                   icon={<IconTrash size={20} />}
-                  label="Delete"
+                  label="Löschen"
                   onClick={() => setDeleteOpen(true)}
                 />
               </MenuList>

@@ -130,7 +130,7 @@ export const MatchSummary = () => {
             href={rootUrl}
             colorScheme="gray"
           >
-            Back to {entityType === "folder" ? "folder" : "set"}
+            Zurück zum {entityType === "folder" ? "Ordner" : "Kartensatz"}
           </Button>
           <Button
             onClick={async () => {
@@ -138,7 +138,7 @@ export const MatchSummary = () => {
             }}
             leftIcon={<IconPlayerPlay size={18} />}
           >
-            {elapsed ? "Play again" : "Play Match"}
+            {elapsed ? "Erneut spielen" : "Neues Match"}
           </Button>
         </ButtonGroup>
       </Stack>

@@ -76,14 +76,14 @@ export const ResultsView = () => {
           spacing="4"
           alignItems={{ base: "start", sm: "center" }}
         >
-          <Heading>Your results</Heading>
+          <Heading>Dein Ergebnis</Heading>
           <ButtonGroup>
             <Button
               leftIcon={<IconRotateClockwise2 size={18} />}
               onClick={() => reset()}
               variant="outline"
             >
-              New test
+              Neuer Test
             </Button>
             <Button
               variant="outline"
@@ -92,7 +92,7 @@ export const ResultsView = () => {
               href={rootUrl}
               leftIcon={<IconArrowLeft size={18} />}
             >
-              Back
+              Zurück
             </Button>
           </ButtonGroup>
         </HStack>
@@ -154,7 +154,7 @@ export const ResultsView = () => {
               });
             }}
           >
-            Back to top
+            Nach oben
           </Button>
         </VStack>
       </Stack>

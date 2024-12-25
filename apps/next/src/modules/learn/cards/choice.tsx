@@ -149,8 +149,8 @@ export const ChoiceCard: React.FC<ChoiceCardProps> = ({ active }) => {
       ? remark.correct
       : status == "incorrect"
         ? remark.incorrect
-        : `Choose matching ${
-            active.answerMode == "Definition" ? "definition" : "term"
+        : `Wähle die passende ${
+            active.answerMode == "Definition" ? "Antwort" : "Frage"
           }`;
 
   return (

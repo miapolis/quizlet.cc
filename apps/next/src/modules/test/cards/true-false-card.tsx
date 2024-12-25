@@ -57,7 +57,7 @@ export const TrueFalseCard: React.FC<CardProps> = ({ i, result }) => {
       >
         <Box w="full" pr={{ base: 0, sm: "4" }}>
           <RichPromptDisplay
-            label={question.answerMode == "Definition" ? "Term" : "Definition"}
+            label={question.answerMode == "Definition" ? "Frage" : "Antwort"}
             extra={
               question.answerMode == "Word" && data.term.assetUrl && <Asset />
             }
@@ -83,7 +83,7 @@ export const TrueFalseCard: React.FC<CardProps> = ({ i, result }) => {
         />
         <Box w="full" pl={{ base: 0, sm: 4 }}>
           <RichPromptDisplay
-            label={question.answerMode == "Definition" ? "Definition" : "Term"}
+            label={question.answerMode == "Definition" ? "Antwort" : "Frage"}
             extra={
               question.answerMode == "Definition" &&
               data.term.assetUrl && <Asset />
@@ -94,7 +94,7 @@ export const TrueFalseCard: React.FC<CardProps> = ({ i, result }) => {
       </Grid>
       <Stack>
         <GenericLabel evaluation={evaluation}>
-          {remark?.remark ?? "Choose an answer"}
+          {remark?.remark ?? "Wähle eine Antwort"}
         </GenericLabel>
         <SimpleGrid columns={2} gap={{ base: 4, md: 6 }}>
           <GridItem>
@@ -114,7 +114,7 @@ export const TrueFalseCard: React.FC<CardProps> = ({ i, result }) => {
                 ) : (
                   <IconCircleCheck size={18} />
                 )}
-                <Text>True</Text>
+                <Text>Wahr</Text>
               </HStack>
             </Clickable>
           </GridItem>
@@ -135,7 +135,7 @@ export const TrueFalseCard: React.FC<CardProps> = ({ i, result }) => {
                 ) : (
                   <IconCircleX size={18} />
                 )}
-                <Text>False</Text>
+                <Text>Falsch</Text>
               </HStack>
             </Clickable>
           </GridItem>

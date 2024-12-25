@@ -41,7 +41,8 @@ export const FoldersList = () => {
                 title={x.title}
                 url={`/@${profile.username}/folders/${x.slug ?? x.id}`}
                 numValues={x.studySets.length}
-                label="set"
+                labelSingle="Kartensatz"
+                labelMult="Kartensätze"
                 leftIcon={<IconFolder size="18" className="min-w-[18px]" />}
               />
             ))}

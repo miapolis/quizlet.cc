@@ -53,7 +53,7 @@ export const TopBar = () => {
   const bg = useColorModeValue("white", "gray.800");
 
   const text = isSaving
-    ? "Saving..."
+    ? "Speichern..."
     : saveError ??
       `${numTerms} ${numTerms > 1 ? "Fragen" : "Frage"} ${
         getRelativeTime(savedAt) || "jetzt gerade"

@@ -24,8 +24,8 @@ export const placeholderLanguage = (
   definitionLanguage: Language,
   answerMode: StudySetAnswerMode,
 ) => {
-  if (wordLanguage == definitionLanguage) return "answer";
+  if (wordLanguage == definitionLanguage) return "Antwort";
   const language =
     answerMode == "Definition" ? definitionLanguage : wordLanguage;
-  return language !== "en" ? languageName(language) : "answer";
+  return language !== "en" ? languageName(language) : "Antwort";
 };

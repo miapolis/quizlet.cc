@@ -33,8 +33,8 @@ export const MatchStartModal: React.FC<MatchStartModalProps> = ({ isOpen }) => {
       <Modal.Content>
         <Modal.Body spacing="10">
           <Stack>
-            <Modal.Heading>Welcome to Match!</Modal.Heading>
-            <Text>Drag corresponding tiles together to clear the board.</Text>
+            <Modal.Heading>Kombinieren!</Modal.Heading>
+            <Text>Ziehe die passenden Fragen & Antworten übereinander um zu gewinnen.</Text>
           </Stack>
           {/*TODO: There should be a gif here*/}
           <ButtonGroup spacing="4">
@@ -45,7 +45,7 @@ export const MatchStartModal: React.FC<MatchStartModalProps> = ({ isOpen }) => {
               variant="outline"
               onClick={router.back}
             >
-              Back
+              Zurück
             </Button>
             <Button
               w="full"
@@ -57,7 +57,7 @@ export const MatchStartModal: React.FC<MatchStartModalProps> = ({ isOpen }) => {
               }}
               ref={actionRef}
             >
-              Start game
+              Starten
             </Button>
           </ButtonGroup>
         </Modal.Body>

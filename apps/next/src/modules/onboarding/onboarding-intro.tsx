@@ -26,7 +26,7 @@ export const OnboardingIntro = () => {
   return (
     <Box>
       <HeadSeo
-        title="Welcome to Quenti"
+        title="Willkommen bei Quenti"
         hideTitleSuffix
         nextSeoProps={{
           noindex: true,
@@ -51,7 +51,7 @@ const Intro = () => {
       <motion.div {...ghost}>
         <Logo width={24} height={24} />
       </motion.div>
-      <Heading size="3xl">Welcome to Quenti</Heading>
+      <Heading size="3xl">Willkommen bei Quenti</Heading>
       <Text fontWeight={500}>{BODY_COPY_BASE}</Text>
       <Button
         mt="4"
@@ -62,7 +62,7 @@ const Intro = () => {
           next();
         }}
       >
-        Get started
+        Beginnen
       </Button>
     </VStack>
   );

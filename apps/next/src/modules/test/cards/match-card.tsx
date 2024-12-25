@@ -303,11 +303,11 @@ const Header: React.FC<Pick<CardProps, "i">> = ({ i }) => {
   return (
     <>
       <Text textColor="gray.500" fontSize="sm" fontWeight={600}>
-        Matching questions
+        Kombination
       </Text>
       <Text fontSize="xl" fontWeight={600}>
-        Drag a {question.answerMode == "Definition" ? "definition" : "term"} to
-        its {question.answerMode == "Definition" ? "term" : "definition"} below
+        Ziehe die {question.answerMode == "Definition" ? "Antwort" : "Frage"} zur
+        richtigen {question.answerMode == "Definition" ? "Frage" : "Antwort"}
       </Text>
     </>
   );
@@ -344,7 +344,7 @@ const Droppable: React.FC<
         fontSize="sm"
       >
         <Text>
-          Drag a {answerMode == "Definition" ? "definition" : "term"} here
+          Ziehe eine {answerMode == "Definition" ? "Antwort" : "Frage"} hierhin
         </Text>
       </Center>
       {children}

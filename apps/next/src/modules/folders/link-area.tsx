@@ -27,7 +27,7 @@ export const LinkArea = () => {
         href={`${folderUrl}/flashcards`}
       />
       <Linkable
-        name="Match"
+        name="Kombinieren"
         icon={<IconLayersSubtract />}
         href={`${folderUrl}/match?intro=true`}
       />

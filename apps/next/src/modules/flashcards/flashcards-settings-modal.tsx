@@ -37,7 +37,7 @@ export const FlashcardsSettingsModal: React.FC<
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Settings</Modal.Heading>
+          <Modal.Heading>Einstellungen</Modal.Heading>
           <CardsSortingSection />
           <Modal.Divider />
           <CardsAnswerModeSection />

@@ -65,10 +65,10 @@ export const CompletedView = () => {
             <TermMastery />
           </Center>
           <VStack textAlign="center" spacing={6}>
-            <Heading>Congratulations, you&apos;ve learned everything!</Heading>
+            <Heading>Glückwunsch, du hast alles gelernt!</Heading>
             {canReview && (
               <Text>
-                Keep reviewing your most missed terms to make sure they stick.
+                Bleibe an deinen Herausforderungen – so verankern sie sich!
               </Text>
             )}
           </VStack>
@@ -81,11 +81,11 @@ export const CompletedView = () => {
                     await beginReview.mutateAsync({ entityId: id });
                   }}
                 >
-                  Review missed terms
+                  Unsichere Fragen weiterlernen
                 </Button>
               ) : (
                 <Button as={Link} href={`/${id}`} w="full">
-                  Finish Learn
+                  Fertig gelernt
                 </Button>
               )}
               <Button
@@ -96,7 +96,7 @@ export const CompletedView = () => {
                   setResetModalOpen(true);
                 }}
               >
-                Reset progress
+                Fortschritt zurücksetzen
               </Button>
             </VStack>
           </Center>

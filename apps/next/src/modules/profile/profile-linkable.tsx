@@ -20,7 +20,8 @@ interface ProfileLinkableProps {
   title: string;
   url: string;
   numValues: number;
-  label: string;
+  labelSingle: string;
+  labelMult: string;
   visibility?: StudySetVisibility;
   leftIcon?: React.ReactNode;
 }
@@ -29,7 +30,8 @@ export const ProfileLinkable = ({
   title,
   url,
   numValues,
-  label,
+  labelSingle,
+  labelMult,
   visibility,
   leftIcon,
 }: ProfileLinkableProps) => {
@@ -73,7 +75,7 @@ export const ProfileLinkable = ({
             color: "gray.400",
           }}
         >
-          {plural(numValues, label)}
+          {numValues} {numValues > 1 || numValues === 0 ? labelMult : labelSingle}
         </Text>
         <HStack>
           {leftIcon}

@@ -71,7 +71,7 @@ export const LearnSettingsModal: React.FC<LearnSettingsModal> = ({
         <Modal.Overlay />
         <Modal.Content>
           <Modal.Body>
-            <Modal.Heading>Settings</Modal.Heading>
+            <Modal.Heading>Einstellungen</Modal.Heading>
             <StudyStarredSection />
             <Modal.Divider />
             <ShuffleLearnSection />

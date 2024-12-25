@@ -68,8 +68,8 @@ export const ShareSetModal: React.FC<ShareSetModalProps> = ({
                 {visibility == "Private" && <IconLock size={32} />}
                 <>
                   {visibility == "Private"
-                    ? "This set is private"
-                    : "Share this set"}
+                    ? "Dieser Kartensatz ist privat"
+                    : "Kartensatz teilen"}
                 </>
               </HStack>
             </Modal.Heading>
@@ -88,14 +88,13 @@ export const ShareSetModal: React.FC<ShareSetModalProps> = ({
                 </Skeleton>
                 <Skeleton rounded="lg" isLoaded={!!getShareId.data}>
                   <Button onClick={copy} variant="outline">
-                    Copy link
+                    Link kopieren
                   </Button>
                 </Skeleton>
               </HStack>
             ) : (
               <Text color={mutedColor}>
-                You need to edit and un-private this set before you can share it
-                with anyone.
+                Du musst diesen Kartensatz auf öffentlich oder ungelistet stellen, um ihn teilen zu können.
               </Text>
             )}
           </Modal.Body>
@@ -108,7 +107,7 @@ export const ShareSetModal: React.FC<ShareSetModalProps> = ({
                   as={Link}
                   href={`/${id}/edit`}
                 >
-                  Edit set
+                  Zum Editor wechseln
                 </Button>
               </Modal.Footer>
             </>

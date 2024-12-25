@@ -80,7 +80,7 @@ export const TermsOverview = () => {
                 <IconKeyframes size={28} />
                 <>{terms.length}</>
               </HStack>
-              <>{terms.length != 1 ? "terms" : "term"} in this set</>
+              <>{terms.length != 1 ? "Fragen" : "Frage"} in diesem Kartensatz</>
             </HStack>
           </Heading>
           <HStack spacing={4}>
@@ -95,14 +95,14 @@ export const TermsOverview = () => {
                 }}
               >
                 <ToggleGroup.Tab onClick={() => setStarredOnly(false)}>
-                  <Text color={!starredOnly ? "blue.300" : undefined}>All</Text>
+                  <Text color={!starredOnly ? "blue.300" : undefined}>Alle</Text>
                 </ToggleGroup.Tab>
                 <ToggleGroup.Tab
                   color={starredOnly ? "blue.300" : undefined}
                   onClick={() => setStarredOnly(true)}
                 >
                   <HStack spacing="2">
-                    <Text>Starred</Text>
+                    <Text>Favoriten</Text>
                     <HStack spacing="1">
                       <IconStar
                         size={14}

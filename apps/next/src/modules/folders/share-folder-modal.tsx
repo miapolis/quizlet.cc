@@ -50,18 +50,18 @@ export const ShareFolderModal: React.FC<ShareFolderModalProps> = ({
         <Modal.Overlay />
         <Modal.Content>
           <Modal.Body>
-            <Modal.Heading>Share this folder</Modal.Heading>
+            <Modal.Heading>Diesen Ordner teilen</Modal.Heading>
             <HStack spacing="3" pb="4">
               <Skeleton width="full" rounded="lg" isLoaded={!!getShareId.data}>
                 <Input
                   spellCheck={false}
                   fontWeight={600}
-                  value={getShareId.isLoading ? "Loading..." : url}
+                  value={getShareId.isLoading ? "Lädt..." : url}
                 />
               </Skeleton>
               <Skeleton rounded="lg" isLoaded={!!getShareId.data}>
                 <Button onClick={copy} variant="outline">
-                  Copy link
+                  Link kopieren
                 </Button>
               </Skeleton>
             </HStack>

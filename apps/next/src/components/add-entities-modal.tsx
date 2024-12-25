@@ -105,10 +105,10 @@ export const AddEntitiesModal: React.FC<AddEntitiesModal> = ({
                 <GhostGroup />
                 <VStack>
                   <Heading fontSize="2xl" fontWeight={600}>
-                    Nothing to add
+                    Nichts zum hinzufügen
                   </Heading>
                   <Text color="gray.500">
-                    Your study material will show up here.
+                    Deine Lerninhalte werden hier erscheinen.
                   </Text>
                 </VStack>
               </VStack>
@@ -119,7 +119,7 @@ export const AddEntitiesModal: React.FC<AddEntitiesModal> = ({
         <Modal.Footer>
           <ButtonGroup>
             <Button onClick={onClose} variant="ghost" colorScheme="gray">
-              Cancel
+              Abbrechen
             </Button>
             <Button
               isLoading={isAddLoading}

@@ -24,7 +24,7 @@ export const CollabSetInfo = () => {
           href={`/${id}`}
           w="max"
         >
-          Back to set
+          Zum Kartensatz
         </Button>
         <Heading>{title}</Heading>
       </Stack>

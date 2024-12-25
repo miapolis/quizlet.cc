@@ -8,9 +8,9 @@ export const TermMastery = () => {
 
   return (
     <Grid gridTemplateColumns="1fr 1fr 1fr" gap={4} w="full">
-      <GridStat label="Unstudied" value={unstudied?.length || 0} />
-      <GridStat label="Familiar" value={familiar?.length || 0} />
-      <GridStat label="Mastered" value={mastered?.length || 0} />
+      <GridStat label="Ungelernt" value={unstudied?.length || 0} />
+      <GridStat label="Bekannt" value={familiar?.length || 0} />
+      <GridStat label="Gemeistert" value={mastered?.length || 0} />
     </Grid>
   );
 };

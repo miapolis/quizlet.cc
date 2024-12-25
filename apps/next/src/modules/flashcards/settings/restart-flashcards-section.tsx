@@ -36,7 +36,7 @@ export const RestartFlashcardsSection: React.FC<{
           });
         }}
       >
-        Restart flashcards
+        Kartensatz neuladen
       </Button>
     </Flex>
   );

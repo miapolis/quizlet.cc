@@ -83,13 +83,13 @@ export const ExportTermsModal: React.FC<ExportTermsModalProps> = ({
         <Modal.Overlay />
         <Modal.Content>
           <Modal.Body>
-            <Modal.Heading>Export terms</Modal.Heading>
+            <Modal.Heading>Kartensatz exportieren</Modal.Heading>
             <Flex gap={4}>
               <Stack w="full">
                 <Stack spacing={0}>
-                  <Text fontWeight={700}>In between terms</Text>
+                  <Text fontWeight={700}>Zwischen den Fragen</Text>
                   <Text fontSize="sm" color={grayText}>
-                    Defaults to tab
+                    Standartwert: Tab (\t)
                   </Text>
                 </Stack>
                 <Input
@@ -101,9 +101,9 @@ export const ExportTermsModal: React.FC<ExportTermsModalProps> = ({
               </Stack>
               <Stack w="full">
                 <Stack spacing={0}>
-                  <Text fontWeight={700}>In between cards</Text>
+                  <Text fontWeight={700}>Zwischen den Karten</Text>
                   <Text fontSize="sm" color={grayText}>
-                    Defaults to newline
+                    Standartwert: neue Zeile (\n)
                   </Text>
                 </Stack>
                 <Input
@@ -127,9 +127,9 @@ export const ExportTermsModal: React.FC<ExportTermsModalProps> = ({
           <Modal.Footer>
             <ButtonGroup>
               <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-                Cancel
+                Abbrechen
               </Button>
-              <Button onClick={handleCopy}>Copy</Button>
+              <Button onClick={handleCopy}>Kopieren</Button>
             </ButtonGroup>
           </Modal.Footer>
         </Modal.Content>

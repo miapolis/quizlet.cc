@@ -11,11 +11,11 @@ import { useContainerContext } from "../../../stores/use-container-store";
 
 const options: { label: string; value: LimitedStudySetAnswerMode }[] = [
   {
-    label: "Term",
+    label: "Frage",
     value: "Word",
   },
   {
-    label: "Definition",
+    label: "Antwort",
     value: "Definition",
   },
 ];
@@ -37,9 +37,9 @@ export const CardsAnswerModeSection = () => {
   return (
     <Flex gap={{ base: 4, sm: 8 }} flexDir={{ base: "column", sm: "row" }}>
       <Stack spacing={0} w="full">
-        <Text fontWeight={700}>Answer with</Text>
+        <Text fontWeight={700}>Verberge: </Text>
         <Text fontSize="sm" color={mutedColor}>
-          Choose how to answer with flashcards
+          Willst du Fragen oder Antworten lernen
         </Text>
       </Stack>
       <Box w="60">

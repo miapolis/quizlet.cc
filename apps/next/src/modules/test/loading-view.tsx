@@ -143,7 +143,7 @@ const LoadingViewRaw = () => {
               },
             }}
           >
-            <Heading size="xl">Grading your test...</Heading>
+            <Heading size="xl">Testauswertung...</Heading>
           </SlideFade>
           <SlideFade
             in

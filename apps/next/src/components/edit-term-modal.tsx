@@ -106,7 +106,7 @@ export const EditTermModal: React.FC<EditTermModalProps> = ({
       <Modal.Overlay />
       <Modal.Content>
         <Modal.Body>
-          <Modal.Heading>Edit term</Modal.Heading>
+          <Modal.Heading>Frage bearbeiten</Modal.Heading>
           <Stack w="full">
             <RichTextBar
               activeEditor={wordEditor}
@@ -146,7 +146,7 @@ export const EditTermModal: React.FC<EditTermModalProps> = ({
                 <img
                   width={100}
                   height={80}
-                  alt="Term asset"
+                  alt="Fragebild"
                   src={resize({ src: cachedAssetUrl, width: 500 })}
                   style={{
                     cursor: "zoom-in",
@@ -183,7 +183,7 @@ export const EditTermModal: React.FC<EditTermModalProps> = ({
         <Modal.Footer>
           <ButtonGroup>
             <Button variant="ghost" colorScheme="gray" onClick={onClose}>
-              Cancel
+              Abbrechen
             </Button>
             <Button
               onClick={async () => {
@@ -221,7 +221,7 @@ export const EditTermModal: React.FC<EditTermModalProps> = ({
               }}
               isLoading={edit.isLoading || removeImage.isLoading}
             >
-              Save
+              Speichern
             </Button>
           </ButtonGroup>
         </Modal.Footer>

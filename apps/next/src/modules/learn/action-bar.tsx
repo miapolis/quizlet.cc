@@ -71,15 +71,15 @@ export const ActionBar = () => {
                     fontWeight={500}
                     display={{ base: "none", md: "flex" }}
                   >
-                    Press any key to continue
+                    Drücke eine Taste zum fortfahren
                   </Text>
                   <Button
                     w={{ base: "full", md: "auto" }}
                     onClick={handleAction}
                     fontSize="sm"
                   >
-                    Continue
-                    {roundSummary && ` to round ${roundSummary.round + 2}`}
+                    Fortfahren
+                    {roundSummary && ` mit Runde ${roundSummary.round + 2}`}
                   </Button>
                 </Flex>
               </Container>

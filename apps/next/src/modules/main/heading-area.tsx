@@ -36,6 +36,7 @@ import { ConfirmModal } from "../../components/confirm-modal";
 import { MenuOption } from "../../components/menu-option";
 import { SetCreatorOnly } from "../../components/set-creator-only";
 import { useSet } from "../../hooks/use-set";
+import { visibilityString } from "../../utils/string";
 
 export const HeadingArea = () => {
   const { id, title, type, tags, terms, visibility } = useSet();
@@ -56,14 +57,14 @@ export const HeadingArea = () => {
       <ConfirmModal
         isOpen={deleteModalOpen}
         onClose={() => setDeleteModalOpen(false)}
-        heading="Delete this set?"
+        heading="Kartensatz löschen?"
         body={
           <Text>
-            Are you absolutely sure you want to delete this set and all
-            associated data? This action cannot be undone.
+            Möchtest du diesen Kartensatz wirklich löschen?
+            Diese Aktion ist permanent.
           </Text>
         }
-        actionText="Delete"
+        actionText="Löschen"
         isLoading={deleteSet.isLoading}
         onConfirm={() => {
           deleteSet.mutate({ studySetId: id });
@@ -114,11 +115,11 @@ export const HeadingArea = () => {
           <HStack color={text} fontWeight={600} spacing={2}>
             <HStack>
               {visibilityIcon(visibility, 18)}
-              <Text>{visibility}</Text>
+              <Text>{visibilityString(visibility)}</Text>
             </HStack>
             <Text>•</Text>
             <Text>
-              {terms?.length || 5} term{terms?.length != 1 ? "s" : ""}
+              {terms?.length || 5} {terms?.length > 1 ? "Fragen" : "Frage"}
             </Text>
           </HStack>
           <SetCreatorOnly>
@@ -130,7 +131,7 @@ export const HeadingArea = () => {
                 role="group"
                 tabIndex={-1}
               >
-                <Tooltip label="Edit">
+                <Tooltip label="Editieren">
                   <LinkBox
                     as={Button}
                     w="8"
@@ -174,7 +175,7 @@ export const HeadingArea = () => {
                 >
                   <MenuOption
                     icon={<IconTrash size={20} />}
-                    label="Delete"
+                    label="Löschen"
                     onClick={() => setDeleteModalOpen(true)}
                   />
                 </MenuList>

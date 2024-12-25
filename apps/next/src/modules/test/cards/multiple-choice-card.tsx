@@ -69,7 +69,7 @@ export const MultipleChoiceCard: React.FC<CardProps> = ({ i, result }) => {
   return (
     <>
       <RichPromptDisplay
-        label={question.answerMode == "Definition" ? "Term" : "Definition"}
+        label={question.answerMode == "Definition" ? "Frage" : "Antwort"}
         extra={
           question.answerMode == "Word" &&
           data.term.assetUrl && (
@@ -85,8 +85,8 @@ export const MultipleChoiceCard: React.FC<CardProps> = ({ i, result }) => {
       <Stack spacing="2">
         <GenericLabel evaluation={evaluation}>
           {remark?.remark ??
-            `Choose matching ${
-              question.answerMode == "Definition" ? "definition" : "term"
+            `Wähle die passende ${
+              question.answerMode == "Definition" ? "Antwort" : "Frage"
             }`}
         </GenericLabel>
         <SimpleGrid columns={{ base: 1, sm: 2 }} gap={{ base: 4, md: 6 }}>

@@ -19,9 +19,9 @@ export const AnswerModeSection = () => {
   return (
     <Flex gap={{ base: 4, sm: 8 }} flexDir={{ base: "column", sm: "row" }}>
       <Stack spacing={0} w="full">
-        <Text fontWeight={700}>Answer with</Text>
+        <Text fontWeight={700}>Verberge:</Text>
         <Text fontSize="sm" color={mutedColor}>
-          Choose how to answer when studying
+          Willst du Fragen oder Antworten lernen
         </Text>
       </Stack>
       <Box w="60">

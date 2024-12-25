@@ -178,7 +178,7 @@ export const TestView: React.FC<TestViewProps> = ({ onSubmit }) => {
             <TestCardGap type="finish" />
             <VStack mt="10" spacing="6" h="24" w="full" position="relative">
               <Heading size="md" m="0">
-                Ready to submit your test?
+                Bereit deinen Test abzugeben?
               </Heading>
               <Button
                 size="lg"
@@ -186,7 +186,7 @@ export const TestView: React.FC<TestViewProps> = ({ onSubmit }) => {
                 onClick={onSubmit}
                 variant={allAnswered ? "solid" : "outline"}
               >
-                Check answers
+                Antworten prüfen
               </Button>
             </VStack>
           </Box>

@@ -42,9 +42,9 @@ export const ShuffleLearnSection = () => {
   return (
     <Flex gap={{ base: 4, sm: 8 }} flexDir={{ base: "column", sm: "row" }}>
       <Stack spacing={0} w="full">
-        <Text fontWeight={700}>Study shuffled</Text>
+        <Text fontWeight={700}>Fragen mischen</Text>
         <Text fontSize="sm" color={mutedColor}>
-          Shuffle the order of terms when studying
+          Mische die Kartenreihenfolge
         </Text>
       </Stack>
       <HStack spacing={3}>
@@ -59,12 +59,12 @@ export const ShuffleLearnSection = () => {
             });
           }}
         />
-        <Tooltip label="Reshuffle">
+        <Tooltip label="Neu mischen">
           <IconButton
             isLoading={reshuffle}
             variant="outline"
             size="sm"
-            aria-label="Reshuffle"
+            aria-label="Neu mischen"
             isDisabled={!shuffleLearn}
             colorScheme="gray"
             rounded="full"

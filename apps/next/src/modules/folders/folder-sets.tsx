@@ -49,7 +49,7 @@ export const FolderSets = () => {
       <AddEntitiesModal
         isOpen={addSetsModalOpen}
         onClose={() => setAddSetsModalOpen(false)}
-        actionLabel="Add sets"
+        actionLabel="Kartensatz hinzufügen"
         isAddLoading={addSets.isLoading}
         isEntitiesLoading={recentForAdd.isLoading}
         entities={(recentForAdd.data ?? []).map((s) => ({
@@ -100,7 +100,7 @@ export const FolderSets = () => {
                 setHasOpenedSets(true);
               }}
             >
-              Add sets
+              Kartensatz hinzufügen
             </Button>
           </GridItem>
         </FolderCreatorOnly>

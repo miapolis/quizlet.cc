@@ -57,18 +57,18 @@ export const ActionArea = () => {
       />
       <ButtonGroup isAttached colorScheme="gray" size="lg" rounded="xl">
         <ActionButton
-          label="Add to folder"
+          label="Ordner hinzufügen"
           icon={IconPlus}
           onClick={() => setAddToFolder(true)}
           unauthedMessage="Create an account for free to make folders and save sets to them"
         />
         <ActionButton
-          label="Share"
+          label="Teilen"
           icon={IconShare}
           onClick={() => setShare(true)}
         />
         <ActionButton
-          label="Print"
+          label="Drucken"
           icon={IconPrinter}
           isLoading={shouldPrint}
           onClick={() => {
@@ -79,7 +79,7 @@ export const ActionArea = () => {
           }}
         />
         <ActionButton
-          label="Export"
+          label="Exportieren"
           icon={IconTableExport}
           onClick={() => setExportOpen(true)}
         />

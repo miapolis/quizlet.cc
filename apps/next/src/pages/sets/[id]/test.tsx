@@ -192,10 +192,10 @@ const TestContainer = () => {
       <ConfirmModal
         isOpen={hasUnansweredOpen}
         onClose={() => setHasUnansweredOpen(false)}
-        actionText="Review questions"
-        cancelText="Submit anyway"
-        heading="Some questions are unanswered"
-        body="Do you want to review your unanswered questions or submit the test now?"
+        actionText="Fragen beantworten"
+        cancelText="Abgeben"
+        heading="Einige Fragen sind unbeantwortet"
+        body="Möchstest du wirklich abgeben ohne die Fragen zu beantworten?"
         onCancel={() => {
           void onSubmit(true);
         }}

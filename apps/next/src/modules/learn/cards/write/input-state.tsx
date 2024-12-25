@@ -99,7 +99,7 @@ export const InputState: React.FC<InputStateProps> = ({ active, onSubmit }) => {
   return (
     <Stack spacing={6}>
       <Stack spacing="2">
-        <GenericLabel>Your answer</GenericLabel>
+        <GenericLabel>Deine Antwort</GenericLabel>
         <Stack spacing="3">
           {!!specialCharacters.length && (
             <Box>
@@ -116,7 +116,7 @@ export const InputState: React.FC<InputStateProps> = ({ active, onSubmit }) => {
           )}
           <Input
             ref={inputRef}
-            placeholder={`Type the ${placeholderLanguage(
+            placeholder={`Schreibe die ${placeholderLanguage(
               wordLanguage,
               definitionLanguage,
               active.answerMode,
@@ -148,9 +148,9 @@ export const InputState: React.FC<InputStateProps> = ({ active, onSubmit }) => {
       <Flex justifyContent="end">
         <ButtonGroup>
           <Button variant="ghost" onClick={() => handleSubmit(true)}>
-            Don&apos;t know?
+            Keine Ahnung?
           </Button>
-          <Button onClick={() => handleSubmit()}>Answer</Button>
+          <Button onClick={() => handleSubmit()}>Antwort</Button>
         </ButtonGroup>
       </Flex>
     </Stack>

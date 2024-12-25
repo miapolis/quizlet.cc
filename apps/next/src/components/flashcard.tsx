@@ -120,7 +120,7 @@ export const Flashcard: React.FC<FlashcardProps> = ({
                 </Box>
               )}
               <Text fontWeight={700} color="gray.500">
-                {isFlipped ? "Definition" : "Term"}
+                {isFlipped ? "Antwort" : "Frage"}
               </Text>
             </HStack>
           </HStack>

@@ -19,7 +19,7 @@ export const RoundSummary = () => {
           <Heading size="lg">
             {roundSummary.progress} / {roundSummary.totalTerms}
           </Heading>
-          <Heading size="md">terms</Heading>
+          <Heading size="md">Fragen</Heading>
         </HStack>
         <Box
           h="1"
@@ -52,7 +52,7 @@ export const RoundSummary = () => {
       <Stack spacing={6} pb="32">
         <HStack>
           <IconKeyframes size={18} />
-          <Heading size="md">Terms studied this round</Heading>
+          <Heading size="md">Fragen in dieser Runde gelernt</Heading>
         </HStack>
         <Stack spacing="14px">
           {roundSummary?.termsThisRound.map((term) => (

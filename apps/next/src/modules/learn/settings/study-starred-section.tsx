@@ -20,9 +20,9 @@ export const StudyStarredSection = () => {
   return (
     <Flex gap={{ base: 4, sm: 8 }} flexDir={{ base: "column", sm: "row" }}>
       <Stack spacing={0} w="full">
-        <Text fontWeight={700}>Terms</Text>
+        <Text fontWeight={700}>Fragen</Text>
         <Text fontSize="sm" color={mutedColor}>
-          Select which terms to study
+          Wähle welche Fragen du lernen willst
         </Text>
       </Stack>
       <ToggleGroup
@@ -45,7 +45,7 @@ export const StudyStarredSection = () => {
           }}
           isDisabled={!starredTerms.length}
         >
-          All
+          Alle
         </ToggleGroup.Tab>
         <ToggleGroup.Tab
           color={studyStarred ? "blue.300" : undefined}
@@ -58,7 +58,7 @@ export const StudyStarredSection = () => {
           }}
           isDisabled={!starredTerms.length}
         >
-          Starred
+          Favoriten
         </ToggleGroup.Tab>
       </ToggleGroup>
     </Flex>

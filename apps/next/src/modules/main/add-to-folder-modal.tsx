@@ -67,7 +67,7 @@ export const AddToFolderModal: React.FC<AddToFolderModalProps> = ({
       <Modal.Content>
         <Modal.Body>
           <Stack spacing={8}>
-            <Modal.Heading>Add to folder</Modal.Heading>
+            <Modal.Heading>Ordner hinzufügen</Modal.Heading>
             <Stack spacing={3}>
               {isLoading ? (
                 Array.from({ length: 5 }).map((_, i) => (
@@ -84,7 +84,7 @@ export const AddToFolderModal: React.FC<AddToFolderModalProps> = ({
                     menuEventChannel.emit("createFolder", id);
                   }}
                 >
-                  Add to new folder
+                  Ordner erstellen
                 </Button>
               )}
               {data?.map((folder) => (
@@ -101,7 +101,7 @@ export const AddToFolderModal: React.FC<AddToFolderModalProps> = ({
         </Modal.Body>
         <Modal.Divider />
         <Modal.Footer>
-          <Button onClick={onClose}>Done</Button>
+          <Button onClick={onClose}>Fertig</Button>
         </Modal.Footer>
       </Modal.Content>
     </Modal>

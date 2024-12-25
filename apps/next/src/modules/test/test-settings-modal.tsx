@@ -72,7 +72,7 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
       <Modal.Content>
         <Modal.Body>
           <Flex justifyContent="space-between">
-            <Modal.Heading size="xl">Set up your test</Modal.Heading>
+            <Modal.Heading size="xl">Test einstellen</Modal.Heading>
             <IconButton
               rounded="full"
               aria-label="Close"
@@ -91,7 +91,7 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
             >
               <Stack spacing="0">
                 <Text fontWeight={600} fontFamily="heading">
-                  Questions
+                  Fragen
                 </Text>
               </Stack>
               <Slider
@@ -161,9 +161,9 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
             justifyContent="space-between"
           >
             <Stack spacing="0">
-              <Text fontWeight={600}>Terms</Text>
+              <Text fontWeight={600}>Fragen</Text>
               <Text fontSize="sm" color={mutedColor}>
-                Choose which terms to study
+                Welche Fragen willst du testen
               </Text>
             </Stack>
             <ToggleGroup
@@ -178,7 +178,7 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
                 }}
                 isDisabled={!starredTerms}
               >
-                All
+                Alle
               </ToggleGroup.Tab>
               <ToggleGroup.Tab
                 onClick={() => {
@@ -189,7 +189,7 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
                 }}
                 isDisabled={!starredTerms}
               >
-                Starred
+                Favoriten
               </ToggleGroup.Tab>
             </ToggleGroup>
           </HStack>
@@ -201,9 +201,9 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
             justifyContent="space-between"
           >
             <Stack spacing="0">
-              <Text fontWeight={600}>Answer with</Text>
+              <Text fontWeight={600}>Verberge:</Text>
               <Text fontSize="sm" color={mutedColor}>
-                Choose how to answer questions
+                Willst du Fragen oder Antworten testen
               </Text>
             </Stack>
             <Box w="40">
@@ -227,7 +227,7 @@ export const TestSettingsModal: React.FC<TestSettingsModalProps> = ({
                 onClose();
               }}
             >
-              Start test
+              Test starten
             </Button>
           </ButtonWrapper>
         </Modal.Footer>

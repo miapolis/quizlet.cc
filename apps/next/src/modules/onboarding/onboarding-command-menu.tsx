@@ -35,16 +35,16 @@ export const OnboardingCommandMenu = () => {
   return (
     <PresentWrapper>
       <DefaultLayout
-        heading={interacted ? "That wasn't too bad!" : "Command menu"}
-        seoTitle="Command Menu"
+        heading={interacted ? "Das war gar nicht so schlimm!" : "Kommandomenü"}
+        seoTitle="Kommandomenü"
         description={
           interacted ? (
             <>
-              Don&apos;t forget, you can always{" "}
-              <b>{MOD == "Control" ? "Ctrl" : "⌘"} + K</b> to navigate Quenti.
+              Du kannst immer mit{" "}
+              <b>{MOD == "Control" ? "Strg" : "⌘"} + K</b> Quenti navigieren.
             </>
           ) : (
-            "Navigate between sets, folders and classes quickly."
+            "Navigiere schnell zu Ordnern, Kartensätzen, und vielem mehr."
           )
         }
         nextVariant={interacted ? "solid" : "outline"}
@@ -61,7 +61,7 @@ export const OnboardingCommandMenu = () => {
           >
             <VStack spacing="4">
               <Text fontSize="sm" color="gray.500">
-                Try opening the command menu with:
+                Versuche das Kommandomenü zu öffnen:
               </Text>
               <Heading size="3xl" color={mutedColor} userSelect="none">
                 <Kbd
@@ -80,8 +80,8 @@ export const OnboardingCommandMenu = () => {
                     borderColor: keyBorderHover,
                   }}
                 >
-                  {MOD == "Control" ? "Ctrl" : "⌘"}
-                </Kbd>{" "}
+                  {MOD == "Control" ? "Strg" : "⌘"}
+                </Kbd>{" + "}
                 <Kbd
                   fontFamily={outfit.style.fontFamily}
                   px="5"

@@ -54,9 +54,9 @@ export const OnboardingUsername = () => {
     <ToastWrapper>
       <PresentWrapper>
         <DefaultLayout
-          heading="Choose a username"
-          seoTitle="Choose a Username"
-          description="You can change your username and avatar any time in settings."
+          heading="Wähle deinen Nutzernamen"
+          seoTitle="Nutzernamen wählen"
+          description="Du kannst deinen Nutzernamen & Avatar in dein Einstellungen anpassen."
           defaultNext={!callback}
           onNext={async () => {
             mutationEventChannel.emit("submitUsername");
@@ -109,7 +109,7 @@ export const OnboardingUsername = () => {
                     color: "gray.400",
                   }}
                 >
-                  Recommended size 256x256
+                  Empfohlene Größe: 256x256
                 </Text>
                 <ButtonGroup
                   colorScheme="gray"
@@ -122,7 +122,7 @@ export const OnboardingUsername = () => {
                     w="max"
                     leftIcon={<IconUpload size={16} />}
                   >
-                    Change avatar
+                    Avatar anpassen
                   </Button>
                   {image && !image?.startsWith(env.NEXT_PUBLIC_APP_URL) && (
                     <Button
@@ -133,7 +133,7 @@ export const OnboardingUsername = () => {
                       isLoading={removeAvatar.isLoading}
                       onClick={() => removeAvatar.mutate()}
                     >
-                      Remove
+                      Entfernen
                     </Button>
                   )}
                 </ButtonGroup>

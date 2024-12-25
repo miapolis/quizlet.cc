@@ -1,11 +1,11 @@
-export const SLOGAN = "The ultimate learning platform";
-export const SLOGAN_TITLE = "The Ultimate Learning Platform";
+export const SLOGAN = "Die ultimative Lernplattform";
+export const SLOGAN_TITLE = "Die Ultimative Lernplattform";
 
-export const TAGLINE = "There's plenty with Quenti";
-export const TAGLINE_TITLE = "There's Plenty with Quenti";
+export const TAGLINE = "Mit Quenti geht’s weiter";
+export const TAGLINE_TITLE = "Mit Quenti Geht’s Weiter";
 
 export const BODY_COPY_LANDING =
-  "Meet Quenti, the new standard for online studying. Powerful, fast, and ads are thrown right out the window. Free forever for students.";
+  "Lerne Quenti kennen, den neuen Standard fürs Online-Lernen. Leistungsstark, schnell und völlig werbefrei. Für Schüler und Studierende für immer kostenlos.";
 export const BODY_COPY_BASE =
-  "Quenti is the modern learning platform designed to let you study anything.";
-export const BODY_COPY_SEO = `${BODY_COPY_BASE} Study with flashcards, games and more, all without interruptions.`;
+  "Quenti ist die moderne Lernplattform, mit der du alles lernen kannst.";
+export const BODY_COPY_SEO = `${BODY_COPY_BASE} Lerne mit Karteikarten, Spielen und mehr – ohne Unterbrechungen.`;

@@ -86,7 +86,7 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
       success: (result) => {
         setFile(result as File);
         if (result.size > 5_000_000) {
-          setUploadError("That file is too large to upload (> 5 MB)");
+          setUploadError("Bild zu groß (> 5 MB)");
           reset();
           return;
         }
@@ -235,7 +235,7 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
           )}
         />
         <ModalContent bg="transparent" shadow="none">
-          <ModalBody
+          {/* <ModalBody
             p="0"
             background={useColorModeValue(
               "rgba(247, 250, 252, 40%)",
@@ -254,7 +254,7 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
             <Box py="4" px="5">
               <Input
                 ref={inputRef}
-                placeholder="Search for an image"
+                placeholder="Nach einem Bild suchen"
                 size="sm"
                 variant="unstyled"
                 fontSize="xl"
@@ -291,7 +291,7 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
             </Box>
           </ModalBody>
           <Text mt="3" fontSize="xs" ml="3" color="gray.500" opacity={0.75}>
-            Images by{" "}
+            Bilder von{" "}
             <Link
               href="https://unsplash.com/?utm_source=quenti&utm_medium=referral"
               fontWeight={600}
@@ -309,7 +309,7 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
             >
               Unsplash
             </Link>
-          </Text>
+          </Text> */}
           <VStack mt="6" mx="6" position="relative">
             <Center
               w="full"
@@ -392,10 +392,10 @@ export const SearchImagesModal: React.FC<SearchImagesModalProps> = ({
                     }}
                   >
                     <IconCloudUpload />
-                    <Text fontWeight={600}>Upload an image</Text>
+                    <Text fontWeight={600}>Bild hochladen</Text>
                   </HStack>
                   <Text fontSize="xs" color="gray.500">
-                    Drop or paste files here
+                    Datei hineinziehen oder kopieren
                   </Text>
                 </VStack>
               )}

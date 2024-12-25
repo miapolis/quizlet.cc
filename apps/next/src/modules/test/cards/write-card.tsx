@@ -53,7 +53,7 @@ export const WriteCard: React.FC<CardProps> = ({ i, result }) => {
   return (
     <>
       <RichPromptDisplay
-        label={question.answerMode == "Definition" ? "Term" : "Definition"}
+        label={question.answerMode == "Definition" ? "Frage" : "Antwort"}
         extra={
           question.answerMode == "Word" &&
           data.term.assetUrl && (
@@ -69,7 +69,7 @@ export const WriteCard: React.FC<CardProps> = ({ i, result }) => {
       <Stack>
         <HStack justifyContent="space-between" pr="2">
           <GenericLabel evaluation={evaluation}>
-            {remark?.remark ?? "Your answer"}
+            {remark?.remark ?? "Deine Antwort"}
           </GenericLabel>
           {data.cortexResponse && (
             <CortexGraded response={data.cortexResponse} />
@@ -127,7 +127,7 @@ export const WriteCard: React.FC<CardProps> = ({ i, result }) => {
               ref={inputRef}
               autoComplete="off"
               id={`write-card-input-${i}`}
-              placeholder={`Type the ${placeholderLanguage(
+              placeholder={`Schreibe die ${placeholderLanguage(
                 wordLanguage,
                 definitionLanguage,
                 question.answerMode,

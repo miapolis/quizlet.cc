@@ -46,7 +46,7 @@ export const CollabTopBar = () => {
         getRelativeTime(submission.submittedAt!) || "just now"
       }`
     : isSaving
-      ? "Saving..."
+      ? "Speichern..."
       : `${plural(numTerms, "term")} saved ${
           getRelativeTime(savedAt) || "just now"
         }`;

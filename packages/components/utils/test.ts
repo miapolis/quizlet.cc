@@ -11,13 +11,13 @@ import {
 export const getQuestionTypeName = (type: TestQuestionType) => {
   switch (type) {
     case TestQuestionType.TrueFalse:
-      return "True / false";
+      return "Wahr / Falsch";
     case TestQuestionType.MultipleChoice:
-      return "Multiple choice";
+      return "Multiple Choice";
     case TestQuestionType.Match:
-      return "Matching";
+      return "Kombinieren";
     case TestQuestionType.Write:
-      return "Write";
+      return "Schreiben";
   }
 };
 

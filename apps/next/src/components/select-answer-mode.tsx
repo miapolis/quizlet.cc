@@ -11,15 +11,15 @@ export interface SelectAnswerModeProps {
 
 const options: { label: string; value: StudySetAnswerMode }[] = [
   {
-    label: "Term",
+    label: "Fragen",
     value: "Word",
   },
   {
-    label: "Definition",
+    label: "Antworten",
     value: "Definition",
   },
   {
-    label: "Both",
+    label: "Gemischt",
     value: "Both",
   },
 ];

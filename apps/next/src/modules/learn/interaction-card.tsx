@@ -113,7 +113,7 @@ export const InteractionCard = () => {
           <Stack spacing={6} px="8" py="6">
             <HStack spacing="3">
               <Text textColor="gray.500" fontSize="sm" fontWeight={600}>
-                {active.answerMode == "Definition" ? "Term" : "Definition"}
+                {active.answerMode == "Definition" ? "Frage" : "Antwort"}
               </Text>
               <Box
                 bg="transparent"
@@ -128,7 +128,7 @@ export const InteractionCard = () => {
                 visibility={active.term.correctness < 0 ? "visible" : "hidden"}
               >
                 <Text fontSize="xs" fontWeight={600}>
-                  Let&apos;s try again
+                  Erneut probieren
                 </Text>
               </Box>
             </HStack>

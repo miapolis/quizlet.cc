@@ -61,22 +61,22 @@ const leaderboardSummary = (
   const successor = highscores[Math.max(selfIndex - 1, 0)]!;
 
   if (!isPr) {
-    return `See if you can beat your personal record of ${formatDeciseconds(
-      personal.time,
-    )} seconds.`;
+    return `Versuche deinen Rekord von ${formatDeciseconds(
+      personal.time!,
+    )} Sekunden zu überbieten.`;
   } else if (successor.userId != userId) {
     return (
       <>
-        Now see if you can beat{" "}
+        Versuche{" "}
         <UsernameLink username={successor.user.username} color="blue.300" />
         &apos;{!successor.user.username?.toLowerCase().endsWith("s")
           ? "s"
           : ""}{" "}
-        time of {formatDeciseconds(successor.time)} seconds.
+        Bestzeit von {formatDeciseconds(successor.time)} Sekunden zu schlagen.
       </>
     );
   } else {
-    return `You're #1!`;
+    return `Du bist #1!`;
   }
 };
 
@@ -87,12 +87,12 @@ const personalSummary = (
   const isPr = elapsed == highscore.bestTime;
 
   if (!isPr) {
-    return `See if you can beat your personal record of ${formatDeciseconds(
+    return `Versuche deinen Rekord von ${formatDeciseconds(
       highscore.bestTime!,
-    )} seconds.`;
+    )} Sekunden zu überbieten.`;
   } else {
-    return `Think you can beat ${formatDeciseconds(
+    return `Meinst du ${formatDeciseconds(
       highscore.bestTime!,
-    )} seconds now?`;
+    )} Sekunden schlagen zu können?`;
   }
 };

@@ -1,46 +1,50 @@
 export const CORRECT = [
-  "Great job!",
-  "Excellent!",
-  "You got it!",
-  "Correct!",
-  "Nice!",
-  "Good job!",
-  "Well done!",
-  "Nice work!",
-  "You've got this!",
-  "You're doing great!",
+  "Super gemacht!",
+  "Ausgezeichnet!",
+  "Du hast es geschafft!",
+  "Richtig!",
+  "Prima!",
+  "Gut gemacht!",
+  "Klasse Leistung!",
+  "Tolle Arbeit!",
+  "Du hast es drauf!",
+  "Du machst das großartig!",
 ];
 
-export const INCORRECT = ["Incorrect.", "Not quite."];
+export const INCORRECT = [
+  "Das ist leider nicht richtig.",
+  "Nicht ganz richtig, versuch es nochmal!",
+];
 
 export const TRUE_FALSE_INCORRECT_IS_TRUE = [
-  "This one's actually true.",
-  "Incorrect. This one's true.",
-  "Not quite. This one's true.",
-  "This one's true.",
+  "Diese Aussage ist tatsächlich wahr.",
+  "Falsch geraten – es stimmt.",
+  "Nicht ganz – diese Aussage ist richtig.",
+  "Diese Aussage ist richtig.",
 ];
+
 export const TRUE_FALSE_INCORRECT_IS_FALSE = [
-  "This one's actually false.",
-  "Incorrect. This one's false.",
-  "Not quite. This one's false.",
-  "This one's false.",
+  "Diese Aussage ist tatsächlich falsch.",
+  "Falsch geraten – es ist falsch.",
+  "Nicht ganz – diese Aussage ist falsch.",
+  "Diese Aussage ist falsch.",
 ];
 
 export const CORRECT_IS_SIMILAR = [
-  "Close enough, we'll give it to you!",
-  "Close enough, we'll take it.",
-  "Sure, we'll take it.",
-  "Similar, fair enough.",
-  "Similar, we'll take it.",
+  "Fast richtig, wir lassen es gelten!",
+  "Knapp daneben, aber es zählt!",
+  "Ist okay, wir geben dir den Punkt!",
+  "Ähnlich genug, passt schon!",
+  "Ähnlich genug, wir lassen es durchgehen!",
 ];
 
 export const GRADING_MESSAGES = [
-  "Think you got it this time?",
-  "Did you nail it this time?",
-  "Test-topping performance?",
-  "Ready to see how you did?",
-  "We're brewing up your score, hang tight.",
-  "Turning the gears, give us a second.",
-  "We're getting your results, just a moment.",
-  "Analyzing your responses, hang tight.",
+  "Glaubst du, du hast es diesmal drauf?",
+  "Hast du es diesmal perfekt getroffen?",
+  "Bist du auf Bestnoten-Kurs?",
+  "Bereit zu sehen, wie du abgeschnitten hast?",
+  "Wir werten deine Antworten aus, bitte kurz warten ...",
+  "Wir drehen die Zahnräder, einen Moment ...",
+  "Wir holen deine Ergebnisse, gleich geht’s weiter ...",
+  "Wir analysieren deine Antworten, bleib kurz dran ...",
 ];

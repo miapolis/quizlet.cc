@@ -41,7 +41,8 @@ export const StudySetsList = () => {
                 url={`/${x.id}`}
                 visibility={x.visibility}
                 numValues={x._count.terms}
-                label="term"
+                labelSingle="Frage"
+                labelMult="Fragen"
               />
             ))}
           </Stack>

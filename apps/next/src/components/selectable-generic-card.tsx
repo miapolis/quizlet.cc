@@ -95,7 +95,12 @@ export const SelectableGenericCard: React.FC<SelectableGenericCard> = ({
           <HStack spacing="2" color={termsTextColor}>
             {type == "folder" && <IconFolder size={16} />}
             <Text fontSize="sm">
-              {plural(numItems, type == "folder" ? "set" : "term")}
+              {numItems} {" "}
+              {
+                type == "folder" ?
+                numItems > 1 || numItems === 0 ? "Kartensäte" : "Kartensatz" :
+                numItems > 1 || numItems === 0 ? "Fragen" : "Frage"
+              }
             </Text>
             {visibility &&
               visibility !== "Public" &&

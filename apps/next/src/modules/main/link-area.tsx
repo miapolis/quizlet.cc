@@ -38,7 +38,7 @@ export const LinkArea = () => {
       columns={{ base: 2, md: 3, lg: 1 }}
     >
       <Linkable
-        name="Learn"
+        name="Lernen"
         icon={<IconBrain />}
         href={`/${id}/learn`}
         requireAuth
@@ -49,19 +49,17 @@ export const LinkArea = () => {
         href={`/${id}/flashcards`}
       />
       <Linkable
-        name="Test"
+        name="Testen"
         icon={<IconReport />}
         href={`/${id}/test`}
         requireAuth
       />
       <Linkable
-        name="Match"
+        name="Kombinieren"
         icon={<IconLayersSubtract />}
         href={`/${id}/match?intro=true`}
         requireAuth
       />
-      <Linkable name="Crossword" icon={<IconGridDots />} comingSoon />
-      <Linkable name="Gravity" icon={<IconMeteor />} comingSoon />
     </SimpleGrid>
   );
 };

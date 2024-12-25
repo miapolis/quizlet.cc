@@ -9,11 +9,11 @@ const allOptions = [
     value: "stats",
   },
   {
-    label: "Original",
+    label: "Eingabe",
     value: "original",
   },
   {
-    label: "Alphabetical",
+    label: "Alphabetisch",
     value: "alphabetical",
   },
 ];

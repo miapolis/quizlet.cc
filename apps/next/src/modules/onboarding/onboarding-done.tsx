@@ -42,10 +42,10 @@ export const OnboardingDone = () => {
   return (
     <PresentWrapper>
       <DefaultLayout
-        heading="You're all set!"
-        seoTitle="You're all set!"
-        description="That's everything for now, you're ready to start using Quenti."
-        action="Done"
+        heading="Alles eingerichtet!"
+        seoTitle="Alles eingerichtet!"
+        description="Das ist erstmal alles - du kannst jetzt Quenti verwenden."
+        action="Fertig"
         nextLoading={startedLoading}
         onNext={async () => {
           setStartedLoading(true);

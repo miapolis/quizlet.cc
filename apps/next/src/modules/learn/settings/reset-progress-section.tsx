@@ -29,9 +29,9 @@ export const ResetProgressSection = () => {
   return (
     <Flex gap={{ base: 4, sm: 8 }} flexDir={{ base: "column", sm: "row" }}>
       <Stack spacing={0} w="full">
-        <Text fontWeight={700}>Start over</Text>
+        <Text fontWeight={700}>Neu anfangen</Text>
         <Text fontSize="sm" color={mutedColor}>
-          Reset progress for this set
+          Fortschritt für dieses Set zurücksetzen
         </Text>
       </Stack>
       <Button
@@ -46,7 +46,7 @@ export const ResetProgressSection = () => {
           });
         }}
       >
-        Reset progress
+        Zurücksetzen
       </Button>
     </Flex>
   );

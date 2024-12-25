@@ -116,7 +116,7 @@ const MatchInfo = () => {
         <Container py="5" px="6">
           <Stack spacing="4">
             <HStack justifyContent="space-between" alignItems="start">
-              <MatchStat label="Time" value={seconds} />
+              <MatchStat label="Zeit" value={seconds} />
               <ButtonGroup>
                 <IconButton
                   icon={<IconArrowBack />}
@@ -130,7 +130,7 @@ const MatchInfo = () => {
                 />
                 <IconButton
                   icon={<IconSettings />}
-                  aria-label="Settings"
+                  aria-label="Einstellungen"
                   variant="ghost"
                   rounded="full"
                   colorScheme="gray"
@@ -141,7 +141,7 @@ const MatchInfo = () => {
             </HStack>
             {highscore.data?.bestTime && (
               <MatchStat
-                label="Best Time"
+                label="Bestzeit"
                 value={formatDeciseconds(highscore.data.bestTime)}
               />
             )}

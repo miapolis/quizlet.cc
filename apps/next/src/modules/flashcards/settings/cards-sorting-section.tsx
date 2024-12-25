@@ -25,11 +25,11 @@ export const CardsSortingSection = () => {
     <Flex gap={8}>
       <Stack spacing={1} w="full">
         <Text fontWeight={700} fontSize="lg">
-          Sort flashcards
+          Fragen sortieren
         </Text>
         <Text fontSize="sm" color={mutedColor}>
-          Study your flashcards by sorting the ones you know. Leave this off to
-          quickly review cards.
+          Lerne deine Karten indem du bekannte aussortierst. Ausschalten um
+          einen schnellen Überblick zu erhalten.
         </Text>
       </Stack>
       <Switch

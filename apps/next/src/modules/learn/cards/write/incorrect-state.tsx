@@ -128,12 +128,12 @@ export const IncorrectState: React.FC<IncorrectStateProps> = ({
                   />
                 }
               >
-                Override - I was correct
+                Überschreiben - Ich habe recht!
               </Button>
             )}
           </Flex>
           <AnswerCard
-            text={guess || "Skipped"}
+            text={guess || "Übersprungen"}
             correct={false}
             skipped={!guess}
           />
@@ -143,7 +143,7 @@ export const IncorrectState: React.FC<IncorrectStateProps> = ({
           animate={{ opacity: 1, transition: { delay: 1 } }}
         >
           <Stack>
-            <GenericLabel>Correct answer</GenericLabel>
+            <GenericLabel>Richtige Antwort</GenericLabel>
             <AnswerCard
               text={
                 <>

@@ -37,7 +37,7 @@ export const Titlebar = () => {
           href={`/${id}`}
         />
         <Heading size="lg" textAlign="center" flex="1">
-          {completed ? "Review" : `Round ${currentRound + 1}`}
+          {completed ? "Review" : `Runde ${currentRound + 1}`}
         </Heading>
         <IconButton
           icon={<IconSettings />}

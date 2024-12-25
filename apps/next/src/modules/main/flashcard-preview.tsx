@@ -116,7 +116,7 @@ export const FlashcardPreview = () => {
                 onClick={toggleAutoplay}
                 isDisabled={enableCardsSorting}
               >
-                Autoplay
+                Auto. weiter
               </Button>
             </Stack>
             <Button
@@ -125,7 +125,7 @@ export const FlashcardPreview = () => {
               display={{ base: "none", lg: "flex" }}
               onClick={() => setSettingsOpen(true)}
             >
-              Settings
+              Einstellungen
             </Button>
           </Stack>
           <Flex justifyContent={{ base: "end", lg: "start" }} marginTop="4">

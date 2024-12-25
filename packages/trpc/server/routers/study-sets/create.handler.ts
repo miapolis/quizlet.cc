@@ -44,7 +44,7 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
   if (!autosave.title.trim().length) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Set title is required.",
+      message: "\"Titel\" muss festgelegt werden",
     });
   }
 
@@ -54,7 +54,7 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
   if (autosave.terms.length - blankTerms.length < 2) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "At least two terms are required.",
+      message: "Mindestens 2 Fragen werden benötigt",
     });
   }
 
