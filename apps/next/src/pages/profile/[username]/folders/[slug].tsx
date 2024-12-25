@@ -10,12 +10,6 @@ import { PageWrapper } from "../../../../common/page-wrapper";
 import { getLayout } from "../../../../layouts/main-layout";
 import type { inferSSRProps } from "../../../../lib/infer-ssr-props";
 
-const Folder404 = dynamic(
-  () => import("../../../../modules/folders/folder-404"),
-  {
-    ssr: false,
-  },
-);
 const InternalFolder = dynamic(
   () => import("../../../../components/internal-folder"),
 );
@@ -23,7 +17,18 @@ const InternalFolder = dynamic(
 export const runtime = "experimental-edge";
 
 const FolderPage = ({ folder }: inferSSRProps<typeof getServerSideProps>) => {
-  if (!folder) return <Folder404 />;
+  if(!folder) {
+    folder = {
+      studySets: -1, 
+      id: "placeholder", 
+      description: "placeholder", 
+      title: "placeholder", 
+      user: { 
+        username: null, 
+        image: null 
+      }
+    };
+  }
 
   return (
     <>
