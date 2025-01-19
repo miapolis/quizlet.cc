@@ -51,7 +51,7 @@ export const InputState: React.FC<InputStateProps> = ({ active, onSubmit }) => {
       return;
     }
 
-    if (!answer.trim().length) return;
+    if (!answer.trim().length) handleSubmit(true);
 
     onSubmit(answer.trim());
 
